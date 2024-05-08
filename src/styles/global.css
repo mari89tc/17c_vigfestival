@@ -15,6 +15,16 @@
   --color-naturel-300: #898686;
   --color-naturel-500: #0a0a0a;
   /* numbers */
+  --spacing-1: 0.625rem;
+  --spacing-2: 1.25rem;
+  --spacing-3: 1.5625rem;
+  --spacing-4: 2.5rem;
+  --spacing-5: 3.125rem;
+  --spacing-6: 3.75rem;
+  --spacing-7: 6.25rem;
+  --spacing-8: 9.375rem;
+  --spacing-9: 12.5rem;
+  --spacing-10: 21.875rem;
 }
 :root {
   /* Mode 1 */
@@ -77,6 +87,19 @@
   --color-text-heading4-white: var(--color-naturel-100);
   --color-text-normaltext-black: var(--color-naturel-500);
   --color-text-normaltext-white: var(--color-naturel-100);
+  /* numbers */
+  --spacing-corner-radius-small: var(--spacing-1);
+  --spacing-corner-radius-medium: var(--spacing-2);
+  --spacing-horisontal-xsmall: var(--spacing-1);
+  --spacing-horisontal-small: var(--spacing-2);
+  --spacing-horisontal-medium: var(--spacing-3);
+  --spacing-margin-small: var(--spacing-2);
+  --spacing-margin-medium: var(--spacing-4);
+  --spacing-vertical-xsmall: var(--spacing-6);
+  --spacing-vertical-small: var(--spacing-7);
+  --spacing-vertical-medium: var(--spacing-8);
+  --spacing-vertical-large: var(--spacing-9);
+  --spacing-vertical-xlarge: var(--spacing-10);
 }
 
 /* Fonte */
