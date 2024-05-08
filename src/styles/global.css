@@ -1,0 +1,103 @@
+/* Colours plugin from Figma */
+:root {
+  /* Mode 1 */
+  /* colors */
+  --color-green-100: #d7f19f;
+  --color-green-200: #b6d475;
+  --color-green-300: #526b43;
+  --color-green-400: #174128;
+  --color-green-500: #0d2a19;
+  --color-pink-100: #fcf0fb;
+  --color-pink-200: #ffd9fd;
+  --color-pink-300: #ff9cf9;
+  --color-pink-400: #e761df;
+  --color-naturel-100: #fffff3;
+  --color-naturel-300: #898686;
+  --color-naturel-500: #0a0a0a;
+  /* numbers */
+}
+:root {
+  /* Mode 1 */
+  /* colors */
+  --color-background-body: var(--color-naturel-100);
+  --color-background-footer: var(--color-green-400);
+  --color-background-header: var(--color-green-400);
+  --color-background-boks-darkgreen: var(--color-green-400);
+  --color-background-boks-lightgreen: var(--color-green-100);
+  --color-background-boks-pink: var(--color-pink-200);
+  --color-button-linkbutton-text-clicked: var(--color-naturel-500);
+  --color-button-linkbutton-text-default: var(--color-naturel-300);
+  --color-button-primarybutton-background-active-fill: var(--color-pink-300);
+  --color-button-primarybutton-background-active-stroke: var(--color-pink-400);
+  --color-button-primarybutton-background-default: var(--color-pink-300);
+  --color-button-primarybutton-background-hover: var(--color-pink-400);
+  --color-button-primarybutton-text-active: var(--color-naturel-500);
+  --color-button-primarybutton-text-default: var(--color-naturel-500);
+  --color-button-primarybutton-text-hover: var(--color-naturel-500);
+  --color-button-roundbutton-background-active: var(--color-pink-300);
+  --color-button-roundbutton-background-hover: var(--color-pink-200);
+  --color-button-roundbutton-text-active: var(--color-naturel-500);
+  --color-button-roundbutton-text-hover: var(--color-naturel-500);
+  --color-button-secondarybutton-background-active-fill: var(--color-green-400);
+  --color-button-secondarybutton-background-active-stroke: var(--color-naturel-500);
+  --color-button-secondarybutton-background-default: var(--color-green-400);
+  --color-button-secondarybutton-background-hover: var(--color-naturel-500);
+  --color-button-secondarybutton-text-active: var(--color-naturel-100);
+  --color-button-secondarybutton-text-default: var(--color-naturel-100);
+  --color-button-secondarybutton-text-hover: var(--color-naturel-100);
+  --color-button-tertiarybutton-background-active-fill: var(--color-pink-200);
+  --color-button-tertiarybutton-background-active-stroke: var(--color-pink-300);
+  --color-button-tertiarybutton-background-default: var(--color-pink-200);
+  --color-button-tertiarybutton-background-hover: var(--color-pink-300);
+  --color-button-tertiarybutton-text-active: var(--color-naturel-500);
+  --color-button-tertiarybutton-text-default: var(--color-naturel-500);
+  --color-button-tertiarybutton-text-hover: var(--color-naturel-500);
+  --color-cards-info-square-background: var(--color-green-100);
+  --color-cards-info-square-text: var(--color-naturel-500);
+  --color-cards-round-background-active: var(--color-pink-300);
+  --color-cards-round-background-default: var(--color-green-100);
+  --color-cards-round-background-hover: var(--color-pink-200);
+  --color-cards-round-text-default: var(--color-naturel-500);
+  --color-cards-round-text-hover: var(--color-naturel-500);
+  --color-cards-schedule-dark-background-background: var(--color-green-200);
+  --color-cards-schedule-dark-text-main: var(--color-green-400);
+  --color-cards-schedule-dark-text-time: var(--color-green-100);
+  --color-cards-schedule-light-background-background: var(--color-green-100);
+  --color-cards-schedule-light-text-main: var(--color-green-400);
+  --color-cards-schedule-light-text-time: var(--color-green-200);
+  --color-cards-ticket-background-default: var(--color-green-200);
+  --color-cards-ticket-background-hover: var(--color-green-400);
+  --color-cards-ticket-text-date: var(--color-green-100);
+  --color-cards-ticket-text-main: var(--color-green-400);
+  --color-text-heading-4-black: var(--color-naturel-500);
+  --color-text-heading2-black: var(--color-naturel-500);
+  --color-text-heading2-white: var(--color-naturel-100);
+  --color-text-heading3-black: var(--color-naturel-500);
+  --color-text-heading3-white: var(--color-naturel-100);
+  --color-text-heading4-white: var(--color-naturel-100);
+  --color-text-normaltext-black: var(--color-naturel-500);
+  --color-text-normaltext-white: var(--color-naturel-100);
+}
+
+/* Fonte */
+/* 
+Proxima Nova Bold:
+font-family: "proxima-nova", sans-serif;
+font-weight: 700;
+font-style: normal; */
+
+/* 
+Proxima Nova Ekstrabold:
+font-family: "proxima-nova", sans-serif;
+font-weight: 800;
+font-style: normal;*/
+
+/* Open Sans Regular:
+font-family: "open-sans", sans-serif;
+font-weight: 400;
+font-style: normal; */
+
+/* Open Sans Bold:
+font-family: "open-sans", sans-serif;
+font-weight: 700;
+font-style: normal; */
