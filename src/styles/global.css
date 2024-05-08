@@ -80,24 +80,147 @@
 }
 
 /* Fonte */
-/* 
-Proxima Nova Bold:
-font-family: "proxima-nova", sans-serif;
-font-weight: 700;
-font-style: normal; */
 
 /* 
 Proxima Nova Ekstrabold:
 font-family: "proxima-nova", sans-serif;
 font-weight: 800;
-font-style: normal;*/
+font-style: normal;
+*/
 
-/* Open Sans Regular:
+/* 
+Proxima Nova Bold:
+font-family: "proxima-nova", sans-serif;
+font-weight: 700;
+font-style: normal; 
+*/
+
+/* 
+Open Sans Regular:
 font-family: "open-sans", sans-serif;
 font-weight: 400;
-font-style: normal; */
+font-style: normal; 
+*/
 
-/* Open Sans Bold:
+/* 
+Open Sans Bold:
 font-family: "open-sans", sans-serif;
 font-weight: 700;
-font-style: normal; */
+font-style: normal; 
+*/
+
+h1 {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 200rem;
+  line-height: auto;
+}
+h2 {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 80rem;
+}
+h3 {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50rem;
+  line-height: 60rem;
+}
+h4 {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 38rem;
+  line-height: auto;
+}
+h5 {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30rem;
+  line-height: auto;
+}
+h6 {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20rem;
+  line-height: auto;
+}
+.large p {
+  font-family: "open-sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24rem;
+  line-height: auto;
+}
+.medium p {
+  font-family: "open-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20rem;
+  line-height: auto;
+}
+.small p {
+  font-family: "open-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18rem;
+  line-height: 26rem;
+}
+.xsmall p {
+  font-family: "open-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12rem;
+  line-height: 14rem;
+}
+/* Mobile */
+/* Fonte til mobil */
+@media (max-width: 700px) {
+  h1 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60rem;
+    line-height: auto;
+  }
+  h2 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50rem;
+    line-height: 60rem;
+  }
+  h3 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 34rem;
+    line-height: 40rem;
+  }
+  h4 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24rem;
+    line-height: auto;
+  }
+  h5 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20rem;
+    line-height: auto;
+  }
+  .large p {
+    font-family: "open-sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18rem;
+    line-height: auto;
+  }
+}
