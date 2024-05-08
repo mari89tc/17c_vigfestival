@@ -95,6 +95,7 @@
   --spacing-horisontal-medium: var(--spacing-3);
   --spacing-margin-small: var(--spacing-2);
   --spacing-margin-medium: var(--spacing-4);
+  --spacing-vertical-xxsmall: var(--spacing-2);
   --spacing-vertical-xsmall: var(--spacing-6);
   --spacing-vertical-small: var(--spacing-7);
   --spacing-vertical-medium: var(--spacing-8);
@@ -173,6 +174,14 @@ h6 {
   font-size: 20rem;
   line-height: auto;
 }
+.linkbuttontext p {
+  font-family: "Proxima Nova";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
 .large p {
   font-family: "open-sans", sans-serif;
   font-weight: 700;
@@ -208,7 +217,7 @@ h6 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 60rem;
+    font-size: 52rem;
     line-height: auto;
   }
   h2 {

@@ -1,5 +1,37 @@
 ---
 ---
-<div></div>
-
-<style></style>
+<div>
+    <a href="/">
+    <p>Køb billet</p>
+    </a>
+</div>
+<style>
+div {
+display: inline-flex;
+padding: 10px var(--spacing-2, 20px);
+justify-content: center;
+align-items: center;
+gap: 10px; 
+}
+a {
+border-radius: 20px;
+background: var(--Color-Button-Tertiarybutton-background-default, #FF9CF9);    
+}
+p {
+color: var(--Color-Button-Tertiarybutton-text-default, #0A0A0A);
+text-align: center;
+font-family: "Proxima Nova";
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+}
+a:hover {
+background: var(--Color-Button-Tertiarybutton-background-hover, #E761DF);    
+}
+a:active {
+border: 2px solid var(--Color-Button-Primarybutton-background-Active_stroke, #E761DF);
+background: var(--Color-Button-Tertiarybutton-background-Active_fill, #FF9CF9);    
+}
+</style>

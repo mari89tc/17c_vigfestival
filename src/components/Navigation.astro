@@ -1,5 +1,25 @@
 ---
+import Tertiarybutton from "./Tertiarybutton.astro"
 ---
-<div></div>
+<nav>
+    <img src="/public/logos/vig_festival_logo.svg" alt="logo">
+    <div>
+    <Tertiarybutton/>
 
-<style></style>
+    </div>
+</nav>
+
+<style>
+nav{
+display: flex;
+width: 1280px;
+padding: 20px;
+justify-content: space-between;
+align-items: center;
+}
+div {
+display: flex;
+align-items: center;
+gap: 23px;    
+}
+</style>
