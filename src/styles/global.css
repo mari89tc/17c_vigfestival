@@ -140,7 +140,7 @@ h1 {
   font-family: "proxima-nova", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 200rem;
+  font-size: 185px;
   line-height: auto;
   text-transform: uppercase;
 }
@@ -148,42 +148,42 @@ h2 {
   font-family: "proxima-nova", sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 80rem;
+  font-size: 80px;
   text-transform: uppercase;
 }
 h3 {
   font-family: "proxima-nova", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 50rem;
-  line-height: 60rem;
+  font-size: 50px;
+  line-height: 60px;
 }
 h4 {
   font-family: "proxima-nova", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 38rem;
-  line-height: auto;
+  font-size: 38px;
+  line-height: normal;
 }
 h5 {
   font-family: "proxima-nova", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 30rem;
-  line-height: auto;
+  font-size: 30px;
+  line-height: normal;
 }
 h6 {
   font-family: "proxima-nova", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 20rem;
-  line-height: auto;
+  font-size: 20px;
+  line-height: normal;
 }
 .linkbuttontext p {
   font-family: "Proxima Nova";
-  font-size: 20px;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -191,29 +191,29 @@ h6 {
   font-family: "open-sans", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 24rem;
+  font-size: 24px;
   line-height: auto;
 }
 .medium p {
   font-family: "open-sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20rem;
+  font-size: 20px;
   line-height: auto;
 }
 .small p {
   font-family: "open-sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 18rem;
-  line-height: 26rem;
+  font-size: 18px;
+  line-height: 26px;
 }
 .xsmall p {
   font-family: "open-sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 12rem;
-  line-height: 14rem;
+  font-size: 12px;
+  line-height: 14px;
 }
 /* Mobile */
 /* Fonte til mobil */
@@ -222,42 +222,42 @@ h6 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 52rem;
+    font-size: 52px;
     line-height: auto;
   }
   h2 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: 50rem;
-    line-height: 60rem;
+    font-size: 50px;
+    line-height: 60px;
   }
   h3 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 32rem;
-    line-height: 40rem;
+    font-size: 32px;
+    line-height: 40px;
   }
   h4 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 24rem;
+    font-size: 24px;
     line-height: auto;
   }
   h5 {
     font-family: "proxima-nova", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 20rem;
+    font-size: 20px;
     line-height: auto;
   }
   .large p {
     font-family: "open-sans", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 18rem;
+    font-size: 18px;
     line-height: auto;
   }
 }
