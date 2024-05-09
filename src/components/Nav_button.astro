@@ -1,0 +1,25 @@
+---
+const {nav} = Astro.props;
+---
+<div>
+    <h2>{nav}</h2>
+</div>
+<style>
+div{
+display: flex;
+padding: var(--spacing-2, 20px) 0px;
+justify-content: center;
+align-items: center;
+gap: var(--spacing-1, 10px);
+}    
+h2 {
+color: var(--Color-pink-200, #FFD9FD);
+text-align: center;
+}
+h2:hover {
+color: var(--Color-pink-300, #FF9CF9);
+}  
+h2:active {
+color: var(--Color-pink-400, #E761DF);   
+} 
+</style>

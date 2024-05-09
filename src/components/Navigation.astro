@@ -1,30 +1,32 @@
 ---
+import NavButton from "./Nav_button.astro"
 import Tertiarybutton from "./Tertiarybutton.astro"
 ---
 <header>
-    <img src="/public/logos/vig_festival_logo.svg" alt="logo">
+  <div class="navigation">
+    <a href="/"><img src="/public/logos/vig_festival_logo.svg" width="55px" height="55px" alt="logo"></a>
     <div>
     <Tertiarybutton/>
     <button>
+      <img src="/public/logos/menu_closed.svg" width="55px" height="27px" alt="menu closed">
     </button>
     </div>
-
+  </div>
     <nav>
         <ul>
-          <li><a href="/">Program</a></li>
-          <li><a href="/">billet</a></li>
-          <li><a href="/">line-up</a></li>
-          <li><a href="/">info</a></li>
-          <li><a href="/">frivillig</a></li>
-          <li><a href="/">om os</a></li>
+          <li><a href="/"><NavButton nav="program"/></a></li>
+          <li><a href="/"><NavButton nav="billet"/></a></li>
+          <li><a href="/"><NavButton nav="line-up"/></a></li>
+          <li><a href="/"><NavButton nav="info"/></a></li>
+          <li><a href="/"><NavButton nav="frivillig"/></a></li>
+          <li><a href="/"><NavButton nav="om os"/></a></li>
         </ul>
       </nav>
 </header>
 
 <style>
-nav{
+.navigation{
 display: flex;
-width: 1280px;
 padding: 20px;
 justify-content: space-between;
 align-items: center;
@@ -33,5 +35,8 @@ div {
 display: flex;
 align-items: center;
 gap: 23px;    
+}
+button {
+  text-decoration: none;
 }
 </style>
