@@ -1,0 +1,28 @@
+---
+const {text} = Astro.props; 
+---
+<div class="accordion">
+    <p>{text}</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="20" viewBox="0 0 31 20" fill="none">
+    <path d="M1.61121 1.5L15.7779 18.5" stroke="#FFFFF3" stroke-width="3" stroke-linecap="round"/>
+    <path d="M29 1.5L15.7778 18.5" stroke="#FFFFF3" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+</div>
+
+<style>
+ .acoordion {
+    border-radius: var(--spacing-1);
+    background: var(--Color-green-400);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: inline-flex;
+    padding: var(--spacing-2);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-1);  
+    }
+
+svg { width: 27px;
+    height: 17px;
+    flex-shrink: 0;
+    }
+</style>
