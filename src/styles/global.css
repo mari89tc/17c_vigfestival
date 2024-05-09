@@ -139,12 +139,14 @@ h1 {
   font-style: normal;
   font-size: 200rem;
   line-height: auto;
+  text-transform: uppercase;
 }
 h2 {
   font-family: "proxima-nova", sans-serif;
   font-weight: 800;
   font-style: normal;
   font-size: 80rem;
+  text-transform: uppercase;
 }
 h3 {
   font-family: "proxima-nova", sans-serif;

@@ -1,5 +1,24 @@
 ---
+const {title} = Astro.props;
 ---
-<div></div>
+<div>
+    <h2>{title}</h2>
+</div>
 
-<style></style>
+<style>
+div{
+display: flex;
+width: 1281px;
+height: 436.57px;
+justify-content: center;
+align-items: center;
+background-image: url(/public/graphics/headergraphic.svg);
+}
+h2 {
+color: var(--color-text-heading2-white, #FFFFF3);
+position: absolute;
+right: 459.5px;
+top: 185px;
+text-align: center;
+}
+</style>
