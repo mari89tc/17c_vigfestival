@@ -1,0 +1,35 @@
+---
+const {head, text} = Astro.props;
+---
+<div>
+    <h5>{head}</h5>
+    <p class="small">{text}</p>
+</div>
+<style>
+div{
+display: flex;
+width: 343px;
+height: 354px;
+padding: 0px var(--spacing-2, 20px);
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: var(--spacing-horisontal-xsmall, 10px);
+flex-shrink: 0; 
+border-radius: var(--spacing-corner-radius-medium, 20px);
+background: var(--Color-Cards-info_square-background, #D7F19F);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+}
+h5 {
+height: 37px;
+flex-shrink: 0;
+align-self: stretch;
+color: var(--Color-Cards-info_square-text, #0A0A0A);
+}
+p {
+height: 204px;
+flex-shrink: 0;
+align-self: stretch;
+color: var(--Color-Cards-info_square-text, #0A0A0A);
+}
+</style>
