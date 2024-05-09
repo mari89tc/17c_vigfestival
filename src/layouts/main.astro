@@ -2,7 +2,7 @@
 const { type = "" } = Astro.props;
 const { title } = Astro.props;
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
 ---
 
@@ -18,7 +18,7 @@ import "../styles/global.css";
   </head>
   <body class={title} class={type}>
     <div>
-      <Header />
+      <Navigation/>
       <slot />
       <Footer />
     </div>
