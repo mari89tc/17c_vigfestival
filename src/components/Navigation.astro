@@ -6,10 +6,10 @@ import Tertiarybutton from "./Tertiarybutton.astro"
   <div class="navigation">
     <a href="/"><img src="/public/logos/vig_festival_logo.svg" width="55px" height="55px" alt="logo"></a>
     <div>
-    <Tertiarybutton/>
-    <button>
-      <img src="/public/logos/menu_closed.svg" width="55px" height="27px" alt="menu closed">
-    </button>
+      <Tertiarybutton/>
+        <button>
+          <img src="/public/logos/menu_closed.svg" width="55px" height="27px" alt="menu closed">
+        </button>
     </div>
   </div>
     <nav>
@@ -35,5 +35,11 @@ div {
 display: flex;
 align-items: center;
 gap: 23px;    
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
 }
 </style>

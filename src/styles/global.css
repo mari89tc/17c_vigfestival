@@ -15,16 +15,16 @@
   --color-naturel-300: #898686;
   --color-naturel-500: #0a0a0a;
   /* numbers */
-  --spacing-1: 0.625rem;
-  --spacing-2: 1.25rem;
-  --spacing-3: 1.5625rem;
-  --spacing-4: 2.5rem;
-  --spacing-5: 3.125rem;
-  --spacing-6: 3.75rem;
-  --spacing-7: 6.25rem;
-  --spacing-8: 9.375rem;
-  --spacing-9: 12.5rem;
-  --spacing-10: 21.875rem;
+  --spacing-1: 0.625px;
+  --spacing-2: 1.25px;
+  --spacing-3: 1.5625px;
+  --spacing-4: 2.5px;
+  --spacing-5: 3.125px;
+  --spacing-6: 3.75px;
+  --spacing-7: 6.25px;
+  --spacing-8: 9.375px;
+  --spacing-9: 12.5px;
+  --spacing-10: 21.875px;
 }
 
 /* elevation/1 */
