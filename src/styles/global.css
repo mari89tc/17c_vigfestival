@@ -1,6 +1,4 @@
-/* Colours plugin from Figma */
 :root {
-  /* Mode 1 */
   /* colors */
   --color-green-100: #d7f19f;
   --color-green-200: #b6d475;
@@ -27,10 +25,7 @@
   --spacing-10: 21.875px;
 }
 
-/* elevation/1 */
-
 :root {
-  /* Mode 1 */
   /* colors */
   --color-background-body: var(--color-naturel-100);
   --color-background-footer: var(--color-green-400);

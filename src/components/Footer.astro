@@ -1,5 +1,79 @@
 ---
 ---
-<div></div>
+<section class="footer">
+    <div class="flex_indhold">
+        <div class="boks_1">
+            <h6>Kontakt</h6>
+        <a href="">Holbækvej 16B 4560 Vig Sjælland</a>
+        <a href="">59 31 64 68</a>
+        <a href="mailto:Info@vigfestival.dk">Info@vigfestival.dk</a>
+    </div>
+    <div class="boks_2">
+        <h6>Erhverv</h6>
+        <a href="">Sportslegat</a>
+        <a href="">Uddeling af overskud</a>
+        <a href="">Sponsorere</a>
+        <a href="">Privatlivspolitik</a>
+        <a href="">Eksterne boder</a>
+        <a href="">Den Rytmiske Højskole</a>
+    </div>
+    <div class="boks_3">
+        <h6>Indhold</h6>
+        <a href="/">Nyhheder</a>
+        <a href="/">Info</a>
+        <a href="/">Kort over Pladsen</a>
+        <a href="/">Om festivalen</a>
+        <a href="/">Frivllig login</a>
+        <a href="">Ledige stillinger</a>
+    </div>
+    <div class="boks_4">
+        <a href="/"> <img class="vf_img" src="/public/logos/vig_festival_logo.svg" alt="Vig festival logo" /></a>
+        <h6>Følg med på vores sociale medier</h6>
+        <a href="/"> <img class="some_img" src="/public/logos/insta_default.svg" alt="Vig festival logo" /></a>
+        <a href="/"> <img class="some_img" src="/public/logos/tiktok_default.svg" alt="Vig festival logo" /></a>       
+        <a href="/"> <img class="some_img" src="/public/logos/facebook_default.svg" alt="Vig festival logo" /></a>
+    </div>
+</section>
 
-<style></style>
+<style>
+.flex_indhold{
+background: var(--Color-Background-footer, #174128);
+display: flex;
+padding: 100px 100px 100px 40px;
+justify-content: space-between;
+flex-wrap: wrap;}
+
+.boks_1, .boks_2, .boks_3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-shrink: 0;
+    gap: 10px;
+  }
+
+ .vf_img{
+    width: 30%;
+ }
+
+ .some_img {width: 10%;
+    justify-content: space-between;
+    
+}
+a {
+color: var(--Color-naturel-100, #FFFFF3);
+text-decoration: none;
+font-family: "Open Sans";
+font-size: 12px;
+font-style: normal;}
+
+a:hover {
+color: var(--color-background-boks-lightgreen,#B6D475) ;
+}
+
+  h6 {
+    color: var(--Color-naturel-100, #FFFFF3);
+    margin: 0;
+    max-width: 200px;
+    text-align:center}
+</style>
