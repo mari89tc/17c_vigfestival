@@ -1,7 +1,51 @@
 ---
 import Header from "../components/Header.astro"
 import Main from "../layouts/main.astro"
+import InfoLarge from "../components/Info_large.astro"
 ---
 <Main title="Info">
 <Header heading="Info"/>
+<section>
+    <div>
+    <InfoLarge head="Børn på festivalen" href="kidsonthefestival"/>
+    <InfoLarge head="Kontakt"/>
+    <InfoLarge head="Regler og sikkerhed"/>
+    <InfoLarge head="Kort over pladsen"/>
+</div>
+<div>
+    <InfoLarge head="Mad og drikke"/>
+    <InfoLarge head="Handicap faciliteter"/>
+    <InfoLarge head="Åbningstider og parkering"/>
+</div>
+<div>
+    <InfoLarge head="Armbånds påsætning"/>
+    <InfoLarge head="Betaling og sikkerhed"/>
+    <InfoLarge head="Festivalbus, tog og taxa"/>
+    <InfoLarge head="Garderobe mm."/>
+</div>
+</section>
 </Main>
+<style>
+section{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+}
+div {
+    display: flex;
+    gap: 20px;
+}
+@media (max-width: 700px) {
+    section {
+    display: grid;
+    grid-template-columns: 2fr;
+    align-items: center;
+    justify-content: center;
+    }
+    div {
+        display: block;
+        gap: 20px;
+    }
+}
+</style>
