@@ -5,6 +5,8 @@ import Primarybutton from "../components/Primarybutton.astro";
 import KunstnerLarge from "../components/Kunstner_large.astro";
 import Secondarybutton from "../components/Secondarybutton.astro";
 import CardSmall from "../components/Card_small.astro";
+import CardSmallReverse from "../components/Card_small_reverse.astro";
+import Heartlist from "../components/Heartlist.astro";
 import Nyheder from "../components/Nyheder.astro";
 ---
 <Main title="Forside">
@@ -54,6 +56,14 @@ import Nyheder from "../components/Nyheder.astro";
         </div>
         </div>    
     </section>
+    <section class="section3">
+        <CardSmallReverse head="Festival for børnene" img="image/index/kids_forside.webp" alt="Barn" href="kidsonthefestival" text="Læs mere">
+            <Heartlist input="Børneland for store og små"/>
+            <Heartlist input="Tryghed for børnene"/>
+            <Heartlist input="Spækket program for børn og unge"/>
+            <Heartlist input="Madhjørne med ro og hygge for alle"/>
+        </CardSmallReverse>
+    </section>
     <section class="section4">
         <h3>Hold dig opdateret</h3>
         <div class="nyheder">
@@ -71,7 +81,7 @@ import Nyheder from "../components/Nyheder.astro";
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding-bottom: var(--spacing-vertical-medium);
+        padding-bottom: var(--spacing-vertical-large);
     }
     .herotext {
         position: absolute;
