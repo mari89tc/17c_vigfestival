@@ -1,8 +1,99 @@
 ---
 import Main from "../layouts/main.astro"
 import "../styles/global.css";
-import BilletCamping from "../components/Billet_camping.astro";
+import Primarybutton from "../components/Primarybutton.astro";
+import KunstnerLarge from "../components/Kunstner_large.astro";
+import Secondarybutton from "../components/Secondarybutton.astro";
+import CardSmall from "../components/Card_small.astro";
+import Nyheder from "../components/Nyheder.astro";
 ---
 <Main title="Forside">
+    <div class="hero">
+        <div>
+            <h4>En fest for hele familien</h4>
+            <h1>Vig Festival</h1>
+            <Primarybutton text="Køb billet" href="tickets"/>
+        </div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
+    <section>
+        <h3>Et program fyldt med fede artister!</h3>
+        <div class="kunstnerindex">
+            <KunstnerLarge href="" img="/image/artist/rasmus_seebach.webp" alt="Rasmus seebach" text="Rasmus Seebach"/>
+            <KunstnerLarge href="" img="rasmus_seebach.wepb" alt="Rasmus seebach" text="Rasmus Seebach"/>
+            <KunstnerLarge href="" img="rasmus_seebach.wepb" alt="Rasmus seebach" text="Rasmus Seebach"/>
+            <KunstnerLarge href="" img="rasmus_seebach.wepb" alt="Rasmus seebach" text="Rasmus Seebach"/>
+        </div>
+        <Secondarybutton href="program" text="Se programmet"/>
+    </section>
+    <section>
+        <CardSmall head="Vær med som frivillig" maintext="Når du bruger din fritid på at arbejde for festivalen og de lokale foreninger, er du en del af et stort fællesskab, hvor der løftes i flok. Sammen med de andre hjælpere får du et unikt sammenhold, der skabes gennem arbejdet, socialt samvær, hygge og samarbejde." img="" href="/" text="Bliv Frivillig"/>
+        <div class="timercomponent">
+            <h3>Vi tæller ned til årets fest!</h3>
+            <div class="timer">
+            <div>
+                <h2>42</h2>
+                <h5>dage</h5>
+            </div>
+            <div>
+                <h2>05</h2>
+                <h5>timer</h5>
+            </div>
+            <div>
+                <h2>59</h2>
+                <h5>min</h5>
+            </div>
+            <div>
+                <h2>26</h2>
+                <h5>sek</h5>
+            </div>
+        </div>
+        </div>    
+    </section>
+    <section>
+        <h3>Hold dig opdateret</h3>
+        <div class="nyheder">
+        <Nyheder img="/" alt="" head="Skål i genbrugsglas!" text="I 2023 lavede vi nye tiltag med genbrugsglas, der er med fokus på at gøre festivalen mere bæredygtig..."/>
+        <Nyheder img="/" alt="" head="Kun 400 partoutbilletter tilbage" text="Skynd dig inden de er udsolgt, og bliv en del af dette års Vig Festival..."/>
+        <Nyheder img="/" alt="" head="Nyhed for børnene" text="I år udvider vi børnenes oase med nye tiltag..."/>    
+        </div>
+    </section>
 </Main>
-<BilletCamping/>
+<style>
+    .hero{
+        margin: 0;
+        padding: 0;
+        background-image: url(/public/graphics/herographic.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+section {
+    justify-content: center;
+}
+h4 {
+    color: var(--color-green-100);
+    margin: 10px;
+    padding: 0px;
+}
+h1 {
+    margin: 5px;
+    padding: 5px;
+}
+.kunstnerindex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-margin-small);
+}
+.timer {
+    display: flex;
+    gap: var(--spacing-margin-small);
+}
+.nyheder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-margin-small);
+}
+</style>

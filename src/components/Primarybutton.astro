@@ -1,33 +1,28 @@
 ---
 const {href = "/", text} = Astro.props;
 ---
-<div>
-  <a href={href}>
-<p class="linkbuttontext">{text}</p>
+<a href={href} class="button-link">
+  <p class="linkbuttontext">{text}</p>
 </a>
-</div>
 
 <style>
-div {
-display: inline-flex;
-padding: 20px 50px;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: var(--spacing-1, 10px);
+.button-link {
+    display: inline-block;
+    padding: 20px 50px;
+    text-decoration: none;
+    background: var(--color-button-primarybutton-background-default, #FF9CF9);
+    color: var(--color-button-primarybutton-text-default, #0A0A0A);
+    border: none;
 }
-a {
-    background: var(--Color-Button-Primarybutton-background-default, #FF9CF9);
+.button-link:hover {
+    background: var(--color-button-primarybutton-background-hover, #E761DF);
+}
+.button-link:active {
+    border: 2px solid var(--color-pink-400, #E761DF);
+    background: var(--color-button-primarybutton-background-default, #FF9CF9);
 }
 p {
-color: var(--Color-Button-Primarybutton-text-default, #0A0A0A);
-}
-a:hover {
-    background: var(--Color-Button-Primarybutton-background-hover, #E761DF);
-}
-a:active {
-border: 2px solid var(--Color-pink-400, #E761DF);
-background: var(--Color-Button-Primarybutton-background-default, #FF9CF9);
+  margin:0px;
 }
 
 </style>

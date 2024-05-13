@@ -13,16 +13,16 @@
   --color-naturel-300: #898686;
   --color-naturel-500: #0a0a0a;
   /* numbers */
-  --spacing-1: 0.625px;
-  --spacing-2: 1.25px;
-  --spacing-3: 1.5625px;
-  --spacing-4: 2.5px;
-  --spacing-5: 3.125px;
-  --spacing-6: 3.75px;
-  --spacing-7: 6.25px;
-  --spacing-8: 9.375px;
-  --spacing-9: 12.5px;
-  --spacing-10: 21.875px;
+  --spacing-1: 0.625rem;
+  --spacing-2: 1.25rem;
+  --spacing-3: 1.5625rem;
+  --spacing-4: 2.5rem;
+  --spacing-5: 3.125rem;
+  --spacing-6: 3.75rem;
+  --spacing-7: 6.25rem;
+  --spacing-8: 9.375rem;
+  --spacing-9: 12.5rem;
+  --spacing-10: 21.875rem;
 }
 
 :root {
@@ -133,11 +133,14 @@ font-style: normal;
 
 h1 {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   font-size: 185px;
-  line-height: auto;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 5.55px;
   text-transform: uppercase;
+  -webkit-text-stroke-color: var(--color-green-100);
+  -webkit-text-stroke-width: 3px;
+  color: transparent;
 }
 h2 {
   font-family: "proxima-nova", sans-serif;
@@ -175,7 +178,7 @@ h6 {
   line-height: normal;
 }
 .linkbuttontext p {
-  font-family: "Proxima Nova";
+  font-family: "proxima-nova", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 20px;
@@ -255,4 +258,11 @@ h6 {
     font-size: 18px;
     line-height: auto;
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
 }

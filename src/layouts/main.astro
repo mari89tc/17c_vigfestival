@@ -18,7 +18,7 @@ import "../styles/global.css";
     <meta name="robots" content="noindex" />
   </head>
   <body class={title} class={type}>
-    <div>
+    <div class="wrapper">
       <!-- <Navigation/> -->
       <slot />
       <Footer />
@@ -27,5 +27,9 @@ import "../styles/global.css";
 </html>
 
 <style>
-  
+  .wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+  }
 </style>

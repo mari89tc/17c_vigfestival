@@ -1,13 +1,13 @@
 ---
 import Secondarybutton from "./Secondarybutton.astro";
-const {head, text, img, alt} = Astro.props;
+const {head, maintext, href, text, img, alt} = Astro.props;
 ---
 <section class="card">
 <div class="content">
 <div class="text">
 <h3>{head}</h3>
-<p class="small">{text}</p>
-<Secondarybutton />
+<p class="small">{maintext}</p>
+<Secondarybutton {href} {text}/>
 </div>
 <img src={img} alt={alt}>
 </div>
@@ -29,7 +29,7 @@ display: flex;
 width: 1209px;
 align-items: center;
 align-content: center;
-gap: var(--spacing-4, 40px) var(--spacing-2, 20px);
+gap: var(--spacing-4) var(--spacing-2, 20px);
 flex-wrap: wrap;
 }
 .text {
@@ -42,6 +42,8 @@ flex: 1 0 0;
 }
 .text h3 {
 color: var(--Color-text-heading3_black, #0A0A0A);
+    margin: 0px;
+    padding: 0px;
 }
 .text p {
 color: var(--Color-text-normaltext_black, #0A0A0A);
