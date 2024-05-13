@@ -5,19 +5,20 @@ import Header from "../components/Header.astro"
 import InfoSquare from "../components/Info_square.astro";
 import Cta from "../components/Cta.astro";
 import Main from "../layouts/main.astro"
+import CardSmallReverse from "../components/Card_small_reverse.astro";
 ---
 <Main title="Børn på festivalen">
 <Header heading="Børn på festivalen"/>
 <section class="section1">
-    <CardLarge img="" alt="" head="Børneland for familien" maintext="Kom forbi Viggos Verden, et børneland hvor der er plads til alle, store som små. Viggos Verden er et sted hvor børnene er i fokus, hvor musik og events skaber rammerne for en god festival for børnene. Viggos Verden tilbyder mange forskellige tilbud til børn og unge, så det er aldrig kedeligt at tilbringe tid her. Oasen byder på Viggos store scene, Viggos lille scene, kreatelt, Tømmerland, hoppeborge, spil og meget mere. Mulighederne er uendelige og selv voksne vil have lyst til at bruge tiden her." href="" text="Se programmet"/>
+    <CardSmallReverse img="image/kids/kids_section1.webp" alt="Børn på græs" head="Børneland for familien" maintext="Kom forbi Viggos Verden, et børneland hvor der er plads til alle, store som små. Viggos Verden er et sted hvor børnene er i fokus, hvor musik og events skaber rammerne for en god festival for børnene. Viggos Verden tilbyder mange forskellige tilbud til børn og unge, så det er aldrig kedeligt at tilbringe tid her. Oasen byder på Viggos store scene, Viggos lille scene, kreatelt, Tømmerland, hoppeborge, spil og meget mere. Mulighederne er uendelige og selv voksne vil have lyst til at bruge tiden her." href="" text="Se programmet"/>
 </section>
 <section class="section2">
-    <CardSmall img="" alt="" head="Festival med familien" maintext="Vidste du at du kan tage dit barn under 11 år gratis med på festivalen. Lad dem opleve og være en del af Viggos Verden. Børn over 12 år kan deltage i festivalen ved køb af en familiebillet. Familiebilletten inkluderer partout for 1 voksen og 1 ung fra 12 år til og med 15 år." href="" text="Køb familiebillet"/>
+    <CardSmall img="image/kids/kids_section2.webp" alt="Familie på festival" head="Festival med familien" maintext="Vidste du at du kan tage dit barn under 11 år gratis med på festivalen. Lad dem opleve og være en del af Viggos Verden. Børn over 12 år kan deltage i festivalen ved køb af en familiebillet. Familiebilletten inkluderer partout for 1 voksen og 1 ung fra 12 år til og med 15 år." href="" text="Køb familiebillet"/>
 </section>
 <section class="section3">
     <h3>Oplev stemningen i Viggos Verden</h3>
-    <video id="hero_desk" width="100%" height="100%" muted loop>
-        <source src="/index/herodesktop.webm" type="video/webm" />
+    <video width="100%" height="100%" controls muted loop>
+        <source src="image/kids/kids_video.mp4" type="video/mp4" />
     </video>
 </section>
 <section class="section4">
@@ -42,5 +43,10 @@ import Main from "../layouts/main.astro"
         align-items: center;
     justify-content: center;
         gap: var(--spacing-margin-medium);
+    }
+    video {
+        width: 60%;
+        height: auto;
+        border-radius: var(--spacing-corner-radius-medium, 20px);
     }
 </style>
