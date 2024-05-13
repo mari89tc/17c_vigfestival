@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: var(--color-background-body);
+}
 :root {
   /* colors */
   --color-green-100: #d7f19f;
@@ -177,7 +184,7 @@ h6 {
   font-size: 20px;
   line-height: normal;
 }
-.linkbuttontext p {
+.linkbuttontext {
   font-family: "proxima-nova", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -185,28 +192,28 @@ h6 {
   line-height: normal;
   text-transform: uppercase;
 }
-.large p {
+.large {
   font-family: "open-sans", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 24px;
   line-height: auto;
 }
-.medium p {
+.medium {
   font-family: "open-sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
   line-height: auto;
 }
-.small p {
+.small {
   font-family: "open-sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
   line-height: 26px;
 }
-.xsmall p {
+.xsmall {
   font-family: "open-sans", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -258,11 +265,4 @@ h6 {
     font-size: 18px;
     line-height: auto;
   }
-}
-
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
 }

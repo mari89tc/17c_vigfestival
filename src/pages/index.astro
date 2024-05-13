@@ -5,31 +5,35 @@ import Primarybutton from "../components/Primarybutton.astro";
 import KunstnerLarge from "../components/Kunstner_large.astro";
 import Secondarybutton from "../components/Secondarybutton.astro";
 import CardSmall from "../components/Card_small.astro";
+import CardSmallReverse from "../components/Card_small_reverse.astro";
+import Heartlist from "../components/Heartlist.astro";
 import Nyheder from "../components/Nyheder.astro";
 ---
 <Main title="Forside">
     <div class="hero">
-        <div>
+        <div class="herotext">
             <h4>En fest for hele familien</h4>
-            <h1>Vig Festival</h1>
+            <img src="/image/index/vig_festival.svg" alt="vig festival tekst">
             <Primarybutton text="Køb billet" href="tickets"/>
         </div>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+        <div class="heroimage">
+        <img class="large" src="/image/index/large_heroimage.webp" alt="festivalgæster">
+        <img class="medium" src="/image/index/medium_heroimage.webp" alt="børn">
+        <img class="small" src="/image/index/small_heroimage.webp" alt="øl skænkning">
     </div>
-    <section>
+    </div>
+    <section class="section1">
         <h3>Et program fyldt med fede artister!</h3>
         <div class="kunstnerindex">
             <KunstnerLarge href="" img="/image/artist/rasmus_seebach.webp" alt="Rasmus seebach" text="Rasmus Seebach"/>
-            <KunstnerLarge href="" img="rasmus_seebach.wepb" alt="Rasmus seebach" text="Rasmus Seebach"/>
-            <KunstnerLarge href="" img="rasmus_seebach.wepb" alt="Rasmus seebach" text="Rasmus Seebach"/>
-            <KunstnerLarge href="" img="rasmus_seebach.wepb" alt="Rasmus seebach" text="Rasmus Seebach"/>
+            <KunstnerLarge href="" img="/image/artist/rasmus_seebach.webp" alt="Rasmus seebach" text="Rasmus Seebach"/>
+            <KunstnerLarge href="" img="/image/artist/rasmus_seebach.webp" alt="Rasmus seebach" text="Rasmus Seebach"/>
+            <KunstnerLarge href="" img="/image/artist/rasmus_seebach.webp" alt="Rasmus seebach" text="Rasmus Seebach"/>
         </div>
         <Secondarybutton href="program" text="Se programmet"/>
     </section>
-    <section>
-        <CardSmall head="Vær med som frivillig" maintext="Når du bruger din fritid på at arbejde for festivalen og de lokale foreninger, er du en del af et stort fællesskab, hvor der løftes i flok. Sammen med de andre hjælpere får du et unikt sammenhold, der skabes gennem arbejdet, socialt samvær, hygge og samarbejde." img="" href="/" text="Bliv Frivillig"/>
+    <section class="section2">
+        <CardSmall head="Vær med som frivillig" maintext="Når du bruger din fritid på at arbejde for festivalen og de lokale foreninger, er du en del af et stort fællesskab, hvor der løftes i flok. Sammen med de andre hjælpere får du et unikt sammenhold, der skabes gennem arbejdet, socialt samvær, hygge og samarbejde." img="image/index/frivllig_forside.webp" alt="frivillige" href="/" text="Bliv Frivillig"/>
         <div class="timercomponent">
             <h3>Vi tæller ned til årets fest!</h3>
             <div class="timer">
@@ -52,12 +56,20 @@ import Nyheder from "../components/Nyheder.astro";
         </div>
         </div>    
     </section>
-    <section>
+    <section class="section3">
+        <CardSmallReverse head="Festival for børnene" img="image/index/kids_forside.webp" alt="Barn" href="kidsonthefestival" text="Læs mere">
+            <Heartlist input="Børneland for store og små"/>
+            <Heartlist input="Tryghed for børnene"/>
+            <Heartlist input="Spækket program for børn og unge"/>
+            <Heartlist input="Madhjørne med ro og hygge for alle"/>
+        </CardSmallReverse>
+    </section>
+    <section class="section4">
         <h3>Hold dig opdateret</h3>
         <div class="nyheder">
-        <Nyheder img="/" alt="" head="Skål i genbrugsglas!" text="I 2023 lavede vi nye tiltag med genbrugsglas, der er med fokus på at gøre festivalen mere bæredygtig..."/>
-        <Nyheder img="/" alt="" head="Kun 400 partoutbilletter tilbage" text="Skynd dig inden de er udsolgt, og bliv en del af dette års Vig Festival..."/>
-        <Nyheder img="/" alt="" head="Nyhed for børnene" text="I år udvider vi børnenes oase med nye tiltag..."/>    
+        <Nyheder img="image/index/nyheder_genbrugsglas.webp" alt="genbrugsglas" head="Skål i genbrugsglas!" text="I 2023 lavede vi nye tiltag med genbrugsglas, der er med fokus på at gøre festivalen mere bæredygtig..."/>
+        <Nyheder img="image/index/nyheder_billetter.webp" alt="glade mennesker" head="Kun 400 partoutbilletter tilbage" text="Skynd dig inden de er udsolgt, og bliv en del af dette års Vig Festival..."/>
+        <Nyheder img="image/index/medium_heroimage.webp" alt="børn" head="Nyhed for børnene" text="I år udvider vi børnenes oase med nye tiltag..."/>    
         </div>
     </section>
 </Main>
@@ -69,9 +81,66 @@ import Nyheder from "../components/Nyheder.astro";
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        padding-bottom: var(--spacing-vertical-large);
     }
-section {
+    .herotext {
+        position: absolute;
+        top:7%;
+        left: 0%;
+    }
+    .herotext img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: var(--spacing-vertical-xsmall);
+    }
+    .heroimage img {
+        border-radius: 360px;
+    }
+    .hero .large {
+        width: 347px;
+        height: 347px;
+        grid-column-start: 3;
+        grid-row-start: 1;
+        object-fit: cover;
+    }
+    .hero .medium {
+        width: 278px;
+        height: 278px;
+        grid-column-start: 4;
+        grid-row-start: 2;
+        object-fit: cover;
+    }
+    .hero .small {
+        width: 186px;
+        height: 186px;
+        grid-column-start: 3;
+        grid-row-start: 2;
+        object-fit: cover;
+        align-self: end;
+    }
+    .heroimage {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+.section1, .section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+.section4 {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.section4 h3 {
+    justify-content: flex-start;
+}
+.nyheder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-margin-small);
 }
 h4 {
     color: var(--color-green-100);
@@ -91,9 +160,5 @@ h1 {
     display: flex;
     gap: var(--spacing-margin-small);
 }
-.nyheder {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-margin-small);
-}
+
 </style>
