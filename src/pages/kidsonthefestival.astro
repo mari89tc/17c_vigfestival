@@ -1,7 +1,46 @@
 ---
+import CardLarge from "../components/Card_large.astro"
+import CardSmall from "../components/Card_small.astro"
 import Header from "../components/Header.astro"
+import InfoSquare from "../components/Info_square.astro";
+import Cta from "../components/Cta.astro";
 import Main from "../layouts/main.astro"
 ---
 <Main title="Børn på festivalen">
 <Header heading="Børn på festivalen"/>
+<section class="section1">
+    <CardLarge img="" alt="" head="Børneland for familien" maintext="Kom forbi Viggos Verden, et børneland hvor der er plads til alle, store som små. Viggos Verden er et sted hvor børnene er i fokus, hvor musik og events skaber rammerne for en god festival for børnene. Viggos Verden tilbyder mange forskellige tilbud til børn og unge, så det er aldrig kedeligt at tilbringe tid her. Oasen byder på Viggos store scene, Viggos lille scene, kreatelt, Tømmerland, hoppeborge, spil og meget mere. Mulighederne er uendelige og selv voksne vil have lyst til at bruge tiden her." href="" text="Se programmet"/>
+</section>
+<section class="section2">
+    <CardSmall img="" alt="" head="Festival med familien" maintext="Vidste du at du kan tage dit barn under 11 år gratis med på festivalen. Lad dem opleve og være en del af Viggos Verden. Børn over 12 år kan deltage i festivalen ved køb af en familiebillet. Familiebilletten inkluderer partout for 1 voksen og 1 ung fra 12 år til og med 15 år." href="" text="Køb familiebillet"/>
+</section>
+<section class="section3">
+    <h3>Oplev stemningen i Viggos Verden</h3>
+    <video id="hero_desk" width="100%" height="100%" muted loop>
+        <source src="/index/herodesktop.webm" type="video/webm" />
+    </video>
+</section>
+<section class="section4">
+    <InfoSquare head="Frivillig som barn" text="Vidste du, at du kan tage dit barn med som hjælper, hvis barnet ikke er fyldt 16 år! På den måde kan i tilbringe tid sammen på festivalen og bidrage til et større fællesskab!"/>
+    <InfoSquare head="Trygt sted for alle" text="Vig Festival er en familiefestival, og derfor er der mange børn og unge med til festen. Lad os alle bidrage til, at også børnene får en tryg og hyggelig fest. Under festivalen er der altid arbejdsomme hjælpere klar til at tage imod børn i alle aldre, så det er altid et sikkert og trygt sted."/>
+    <InfoSquare head="Plads til voksne" text="Bliver forældrene trætte og har brug for et afbræk fra resten af festivalen, så er der mulighed for det i Viggos Verden. Her kan man sætte sig ind i Viggos madskål, hvor der er salg af kaffe og kage, samt lidt mad. En perfekt mulighed for at komme ned i gear og gøre sig klar til næste kunstner på programmet."/>
+</section>
+<section class="section5">
+    <Cta head="Fik du ikke svar på dit spørgsmål, så kontakt os her" href="" text="Kontakt os"/>
+</section>
 </Main>
+<style>
+    .section1, .section2, .section3, .section5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    .section4 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    justify-content: center;
+        gap: var(--spacing-margin-medium);
+    }
+</style>
