@@ -1,0 +1,19 @@
+---
+const {input} = Astro.props;
+---
+<div class="punkt">
+<img src="/logos/small_logo.svg" alt="lille hjerte logo">
+<p class="large">{input}</p>
+</div>
+
+<style>
+
+.punkt {
+    display: flex;
+}
+
+.large {
+    margin: 0;
+    padding-left: var(--spacing-margin-small);
+}
+</style>
