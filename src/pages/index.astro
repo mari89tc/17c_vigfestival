@@ -8,13 +8,14 @@ import CardSmall from "../components/Card_small.astro";
 import CardSmallReverse from "../components/Card_small_reverse.astro";
 import Heartlist from "../components/Heartlist.astro";
 import Nyheder from "../components/Nyheder.astro";
+import CardList from "../components/card_list.astro";
 ---
 <Main title="Forside">
     <div class="hero">
         <div class="herotext">
             <h4>En fest for hele familien</h4>
             <img src="/image/index/vig_festival.svg" alt="vig festival tekst">
-            <Primarybutton text="Køb billet" href="tickets"/>
+            <div class="primary"><Primarybutton text="Køb billet" href="tickets"/></div>
         </div>
         <div class="heroimage">
         <img class="large" src="/image/index/large_heroimage.webp" alt="festivalgæster">
@@ -57,12 +58,12 @@ import Nyheder from "../components/Nyheder.astro";
         </div>    
     </section>
     <section class="section3">
-        <CardSmallReverse head="Festival for børnene" img="image/index/kids_forside.webp" alt="Barn" href="kidsonthefestival" text="Læs mere">
+        <CardList head="Festival for børnene" img="image/index/kids_forside.webp" alt="Barn" href="kidsonthefestival" text="Læs mere">
             <Heartlist input="Børneland for store og små"/>
             <Heartlist input="Tryghed for børnene"/>
             <Heartlist input="Spækket program for børn og unge"/>
             <Heartlist input="Madhjørne med ro og hygge for alle"/>
-        </CardSmallReverse>
+        </CardList>
     </section>
     <section class="section4">
         <h3>Hold dig opdateret</h3>
@@ -87,6 +88,9 @@ import Nyheder from "../components/Nyheder.astro";
         position: absolute;
         top:7%;
         left: 0%;
+    }
+    .herotext h4, .primary{
+        padding-inline-start: var(--spacing-margin-medium);
     }
     .herotext img {
         width: 100%;
@@ -129,8 +133,20 @@ import Nyheder from "../components/Nyheder.astro";
     align-items: center;
     justify-content: center;
 }
+.section1,.section2, .section3 {
+    margin-bottom: var(--spacing-vertical-medium);
+}
+.section4 {
+    margin-bottom: var(--spacing-vertical-large);
+}
+.section1 {
+    gap: var(--spacing-vertical-xsmall);
+    margin-top: var(--spacing-vertical-small);
+}
+
 .section4 h3 {
     justify-content: flex-start;
+    margin-bottom: var(--spacing-vertical-xsmall);
 }
 .nyheder {
     display: flex;
@@ -153,7 +169,22 @@ h1 {
 }
 .timer {
     display: flex;
-    gap: var(--spacing-margin-small);
+    gap: var(--spacing-margin-medium);
 }
 
+.timercomponent {
+    margin-top: var(--spacing-vertical-medium);
+}
+
+.section2 h3 {color: var(--color-green-200);}
+.timer h2, .timer h5 {
+    color: var(--color-green-200);
+    margin: 0;
+    text-align: center;
+}
+.timer h2 {
+  color: var(--color-naturel-100);
+  margin: 0;
+text-align: center;
+}
 </style>

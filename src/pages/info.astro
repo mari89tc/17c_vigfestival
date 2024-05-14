@@ -2,10 +2,11 @@
 import Header from "../components/Header.astro"
 import Main from "../layouts/main.astro"
 import InfoLarge from "../components/Info_large.astro"
+import Cta from "../components/Cta.astro"
 ---
 <Main title="Info">
 <Header heading="Info"/>
-<section>
+<section class="section_1">
     <div>
     <InfoLarge head="Børn på festivalen" href="kidsonthefestival"/>
     <InfoLarge head="Kontakt"/>
@@ -24,28 +25,35 @@ import InfoLarge from "../components/Info_large.astro"
     <InfoLarge head="Garderobe mm."/>
 </div>
 </section>
+<section class="section_2">
+    <Cta head="Fik du ikke svar på dit spørgsmål, så kontakt os her" href="" text="Kontakt os"/>
+</section>
 </Main>
 <style>
-section{
+.section_1{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     place-items: center;
     justify-content: center;
+    margin-top: var(--spacing-vertical-xsmall);
+    margin-bottom: var(--spacing-vertical-medium);
 }
 div {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: var(--spacing-margin-small);
 }
-@media (max-width: 700px) {
-    section {
-    display: grid;
-    grid-template-columns: 2fr;
-    align-items: center;
-    justify-content: center;
+@media (max-width: 1000px) {
+    .section_1 {
+    gap: var(--spacing-margin-small);
     }
     div {
-        display: block;
-        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+            align-items: center;
+    justify-content: center;
+        gap: var(--spacing-margin-small);
     }
 }
 </style>
