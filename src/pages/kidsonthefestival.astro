@@ -31,22 +31,46 @@ import CardSmallReverse from "../components/Card_small_reverse.astro";
 </section>
 </Main>
 <style>
-    .section1, .section2, .section3, .section5 {
+.section1, .section2, .section3, .section5 {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-bottom: var( --spacing-vertical-medium);
+}
+.section2 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: url(/public/graphics/pinkgraphic1.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 160vh; 
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-    .section4 {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    justify-content: center;
-        gap: var(--spacing-margin-medium);
-    }
-    video {
-        width: 60%;
-        height: auto;
-        border-radius: var(--spacing-corner-radius-medium, 20px);
-    }
+
+.section4 {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+gap: var(--spacing-margin-medium);
+margin-bottom: var( --spacing-vertical-medium);
+margin: 0;
+padding: 0;
+position: relative;
+background-image: url(/public/graphics/greengraphic1.svg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 170vh;  
+}
+video {
+width: 60%;
+height: auto;
+border-radius: var(--spacing-corner-radius-medium, 20px);
+}
 </style>
