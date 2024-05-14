@@ -2,6 +2,7 @@
 ---
 <section class="footer">
     <div class="flex_indhold">
+    <div class="flex_text">
         <div class="boks_1">
             <h6>Kontakt</h6>
         <a href="">Holbækvej 16B 4560 Vig Sjælland</a>
@@ -26,12 +27,16 @@
         <a href="/">Frivillig login</a>
         <a href="">Ledige stillinger</a>
     </div>
+    </div>
     <div class="boks_4">
         <a href="/"> <img class="vf_img" src="/public/logos/vig_festival_logo.svg" alt="Vig festival logo" /></a>
         <h6>Følg med på vores sociale medier</h6>
+        <div class="some">
         <a href="/"> <img class="some_img" src="/public/logos/insta_default.svg" alt="Vig festival logo" /></a>
         <a href="/"> <img class="some_img" src="/public/logos/tiktok_default.svg" alt="Vig festival logo" /></a>       
         <a href="/"> <img class="some_img" src="/public/logos/facebook_default.svg" alt="Vig festival logo" /></a>
+    </div>
+    </div>
     </div>
 </section>
 
@@ -43,6 +48,11 @@ padding: 100px 100px 100px 40px;
 justify-content: space-between;
 flex-wrap: wrap;}
 
+.flex_text {
+    display: flex;
+   gap: 100px;
+}
+
 .boks_1, .boks_2, .boks_3{
     display: flex;
     flex-direction: column;
@@ -52,14 +62,27 @@ flex-wrap: wrap;}
     gap: 10px;
   }
 
+  .boks_4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-1);
+  }
+
+
+
+  .some_img {
+    width: 25%;
+    gap: var(--spacing-margin-medium);
+  }
+
+
  .vf_img{
     width: 30%;
  }
 
- .some_img {width: 10%;
-    justify-content: space-between;
-    
-}
 a {
 color: var(--color-naturel-100);
 text-decoration: none;
@@ -68,13 +91,15 @@ font-weight: 400;
 font-size: 12px;
 font-style: normal;}
 
-a:hover {
+.boks_1 a:hover, .boks_2 a:hover, .boks_3 a:hover {
 color: var(--color-green-100) ;
+padding-inline-start: 10px;
 }
 
   h6 {
     color: var(--Color-naturel-100, #FFFFF3);
     margin: 0;
+    line-height: 20px;
     max-width: 200px;
     text-align:center}
 </style>
