@@ -185,6 +185,9 @@ h6 {
   font-size: 20px;
   line-height: normal;
 }
+p {
+  margin: 0px;
+}
 .linkbuttontext {
   font-family: "proxima-nova", sans-serif;
   font-weight: 700;
