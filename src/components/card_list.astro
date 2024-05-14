@@ -1,13 +1,15 @@
 ---
 import Secondarybutton from "./Secondarybutton.astro";
-const { head, img, alt, href, text, maintext} = Astro.props;
+const { head, img, alt, href, text} = Astro.props;
 ---
 <section class="card">
 <div class="content">
 <img class="image" src={img} alt={alt}>
 <div class="text">
 <h3>{head}</h3>
-<p class="small">{maintext}</p>
+<div class="heartlist">
+      <slot />
+</div>
 <Secondarybutton {href} {text}/>
 </div>
 </section>
@@ -20,7 +22,6 @@ padding: 0px var(--spacing-margin-medium, 40px);
 justify-content: center;
 align-items: center;
 align-content: center;
-gap: var(--spacing-margin-medium, 40px) var(--spacing-horisontal-small, 20px);
 flex-wrap: wrap;
 }
 

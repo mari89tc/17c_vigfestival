@@ -11,14 +11,19 @@ const {text} =Astro.props;
 display: flex;
 width: 120px;
 height: 120px;
+text-decoration: none;
+color: transparent;
 justify-content: center;
 align-items: center;
-gap: 10px;
 flex-shrink: 0; 
 border-radius: 360px;   
+position: absolute;
+left: 110px;
+top: 110px;
 }
 .roundbutton a:hover {
 background: var(--Color-Button-Roundbutton-background-hover, #FFD9FD);
+color: var(--Color-Button-Roundbutton-text-hover);
 }
 .linkbuttontext p:hover {
 color: var(--Color-Button-Roundbutton-text-hover, #0A0A0A);
