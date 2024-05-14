@@ -2,44 +2,31 @@
 import Secondarybutton from "./Secondarybutton.astro";
 const {head, maintext, href, text, img, alt} = Astro.props;
 ---
-<section class="card">
-<div class="content">
-<div class="text">
-<h3>{head}</h3>
-<p class="small">{maintext}</p>
-<Secondarybutton {href} {text}/>
-</div>
-<img src={img} alt={alt}>
-</div>
+<section class="content">
+    <div class="text">
+        <h3>{head}</h3>
+        <p class="small">{maintext}</p>
+        <Secondarybutton {href} {text}/>
+    </div>
+    <img src={img} alt={alt}>
 </section>
-
-
 <style>
-.card {
-display: inline-flex;
-padding: 0px var(--spacing-margin-medium, 40px);
-justify-content: center;
-align-items: center;
-align-content: center;
-gap: var(--spacing-margin-medium, 40px) var(--spacing-horisontal-small, 20px);
-flex-wrap: wrap;
-}
 .content {
 display: flex;
-width: 1209px;
 align-items: center;
 align-content: center;
 gap: var(--spacing-4) var(--spacing-2, 20px);
 flex-wrap: wrap;
+margin-left: var(--spacing-margin-small);
+margin-right: var(--spacing-margin-small);
 }
 .text {
 display: flex;
 padding: 0px var(--spacing-4);
 flex-direction: column;
 align-items: flex-start;
-gap: var(--spacing-margin-small);
+gap: var(--spacing-margin-medium);
 flex: 1 0 0; 
-/* order: 1;   */
 }
 .text h3 {
 color: var(--Color-text-heading3_black, #0A0A0A);
@@ -56,6 +43,11 @@ height: 600px;
 border-radius: 360px;
 object-fit: cover;
 background: lightgray 50% / cover no-repeat; 
-/* order:2; */
+}
+@media (max-width: 700px) {
+img{
+width: 360px;
+height: 360px;
+}
 }
 </style>

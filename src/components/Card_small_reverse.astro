@@ -2,45 +2,32 @@
 import Secondarybutton from "./Secondarybutton.astro";
 const { head, img, alt, href, text, maintext} = Astro.props;
 ---
-<section class="card">
-<div class="content">
-<img class="image" src={img} alt={alt}>
-<div class="text">
-<h3>{head}</h3>
-<p class="small">{maintext}</p>
-<Secondarybutton {href} {text}/>
-</div>
+<section class="content">
+    <img class="image" src={img} alt={alt}>
+    <div class="text">
+        <h3>{head}</h3>
+        <p class="small">{maintext}</p>
+        <Secondarybutton {href} {text}/>
+    </div>
 </section>
-
-
 <style>
-.card {
-display: inline-flex;
-padding: 0px var(--spacing-margin-medium, 40px);
-justify-content: center;
-align-items: center;
-align-content: center;
-gap: var(--spacing-margin-medium, 40px) var(--spacing-horisontal-small, 20px);
-flex-wrap: wrap;
-}
-
 .content {
 display: flex;
-width: 1209px;
 align-items: center;
 align-content: center;
-gap: var(--spacing-4, 40px) var(--spacing-2, 20px);
+gap: var(--spacing-4) var(--spacing-2, 20px);
 flex-wrap: wrap;
+margin-left: var(--spacing-margin-small);
+margin-right: var(--spacing-margin-small);
 }
 .text {
 display: flex;
 padding: 0px var(--spacing-4, 40px);
 flex-direction: column;
 align-items: flex-start;
-gap: var(--spacing-vertical-xsmall, 60px);
+gap: var(--spacing-margin-medium);
 flex: 1 0 0;    
 }
-
 .text h3 {
 color: var(--Color-text-heading3_black, #0A0A0A);
 margin: 0px;
@@ -56,5 +43,11 @@ flex-shrink: 0;
 border-radius: 360px;
 background: lightgray 50% / cover no-repeat; 
 object-fit: cover;
+}
+@media (max-width: 700px) {
+.image {
+width: 360px;
+height: 360px;
+}
 }
 </style>
