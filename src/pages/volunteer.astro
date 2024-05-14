@@ -4,8 +4,12 @@ import Main from "../layouts/main.astro"
 import Heartlist from "../components/Heartlist.astro"
 import CardSmall from "../components/Card_small.astro"
 import Cta from "../components/Cta.astro"
+import CardList from "../components/card_list.astro"
+import Faq from "../components/Faq.astro"
+import Header from "../components/Header.astro"
 ---
 <Main title="Frivillig">
+<Header heading="Frivillig"/>
 <section class="section1">
     <CardSmall head="En følelse af fællesskab" maintext="Når du bruger din fritid på at arbejde for festivalen og de lokale foreninger, er du en del af et stort fællesskab, hvor der løftes i flok. Sammen med de andre hjælpere får du et unikt sammenhold, der skabes gennem arbejdet, socialt samvær, hygge og samarbejde.Når du bruger din fritid på at arbejde for festivalen og de lokale foreninger, er du en del af et stort fællesskab, hvor der løftes i flok. Sammen med de andre hjælpere får du et unikt sammenhold, der skabes gennem arbejdet, socialt samvær, hygge og samarbejde." img="image/volunteer/frivillig_section1.webp" alt="to frivillige piger" href="" text="Bliv frivillig"/>
 </section>
@@ -17,15 +21,16 @@ import Cta from "../components/Cta.astro"
     </div>
 </section>
 <section class="section3">
-    <CardSmallReverse head="Fordele som frivillig" img="image/volunteer/frivllig_section3.webp" alt="2 damer fester" href="" text="Bliv frivillig">
+    <CardList head="Fordele som frivillig" img="image/volunteer/frivllig_section3.webp" alt="2 damer fester" href="" text="Bliv frivillig">
         <Heartlist input="Del af årets medhjælperfest"/>
         <Heartlist input="Partoutbillet til alle dage"/>
         <Heartlist input="Gratis mad og drikke!"/>
         <Heartlist input="Du bliver en del af et større fællesskab"/>
-    </CardSmallReverse>
+    </CardList>
 </section>
 <section class="section4">
     <h3>Godt at vide</h3>
+    <Faq/>
 </section>
 <section class="section5">
     <Cta head="Fik du ikke svar på dit spørgsmål, så kontakt os her" href="" text="Kontakt os"/>
@@ -35,10 +40,20 @@ import Cta from "../components/Cta.astro"
 .testimonial {
 display: flex;
 flex-direction: column;
-justify-content: center;
-align-items: center;
+text-align: center;
 width: 600px;
 color: var( --color-green-400);
+}
+
+.section2, .section4, .section5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4 {
+    flex-direction: column;
+    gap: var(--spacing-vertical-xsmall);
 }
 
 </style>

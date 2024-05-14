@@ -1,5 +1,25 @@
 ---
+const {head, text, href} = Astro.props;
 ---
-<div></div>
+<div class="accordion">
+  <p class="medium">{head}</p>
+<a href={href}> <img src="/logos/dropdown.svg" alt="lille hjerte logo"/></a>
+</div>
 
-<style></style>
+<style>
+
+.accordion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 680px;
+    background-color: var(--color-green-400);
+    padding: var(--spacing-margin-small);
+    border-radius: var(--spacing-corner-radius-small);
+}
+p {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-normaltext-white);
+}
+</style>
