@@ -5,7 +5,9 @@ const {head, text, href} = Astro.props;
   <p class="medium">{head}</p>
 <a href={href}> <img src="/logos/dropdown.svg" alt="lille hjerte logo"/></a>
 </div>
-
+<div class="accordion-content">
+  <p class="medium">{text}</p>
+</div>
 <style>
 
 .accordion {
@@ -17,9 +19,36 @@ const {head, text, href} = Astro.props;
     padding: var(--spacing-margin-small);
     border-radius: var(--spacing-corner-radius-small);
 }
+
+.accordion-content {
+    display: none; /* Start hidden */
+    width: 680px;
+    padding: var(--spacing-margin-small);
+    background-color: var(--color-green-300);
+    border-radius: var(--spacing-corner-radius-small);
+    margin-top: var(--spacing-margin-small);
+}
 p {
     margin: 0;
     padding: 0;
     color: var(--color-text-normaltext-white);
 }
+
+.accordion-content p {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-normaltext-white);
+}
+
+.accordion.active + .accordion-content {
+    display: block; /* Show when active */
+}
 </style>
+
+<script>
+function toggleAccordion(event) {
+    event.preventDefault();
+    const accordion = event.target.closest('.accordion');
+    accordion.classList.toggle('active');
+}
+</script>
