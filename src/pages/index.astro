@@ -12,16 +12,20 @@ import CardList from "../components/card_list.astro";
 ---
 <Main title="Forside">
     <div class="hero">
+        <div class="hero-background">
+            <img class="desktop" src="graphics/herographic.png" alt="hero graphic">
+            <img class="mobile" src="graphics/mobilehero.png" alt="hero graphic">
+        </div>
         <div class="herotext">
             <h4>En fest for hele familien</h4>
             <img src="/image/index/vig_festival.svg" alt="vig festival tekst">
             <div class="primary"><Primarybutton text="Køb billet" href="tickets"/></div>
         </div>
         <div class="heroimage">
-        <img class="large" src="/image/index/large_heroimage.webp" alt="festivalgæster">
-        <img class="medium" src="/image/index/medium_heroimage.webp" alt="børn">
-        <img class="small" src="/image/index/small_heroimage.webp" alt="øl skænkning">
-    </div>
+            <img class="large" src="/image/index/large_heroimage.webp" alt="festivalgæster">
+            <img class="medium" src="/image/index/medium_heroimage.webp" alt="børn">
+            <img class="small" src="/image/index/small_heroimage.webp" alt="øl skænkning">
+        </div>
     </div>
     <section class="section1">
         <h3>Et program fyldt med fede artister!</h3>
@@ -75,57 +79,79 @@ import CardList from "../components/card_list.astro";
     </section>
 </Main>
 <style>
-    .hero{
-        margin: 0;
-        padding: 0;
-        background-image: url(/public/graphics/herographic.svg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding-bottom: var(--spacing-vertical-large);
+    .hero {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: var(--spacing-vertical-small);
+        overflow: hidden;
+    }
+    .hero-background {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .hero-background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .mobile {
+        display: none;
     }
     .herotext {
         position: absolute;
-        top:7%;
-        left: 0%;
-    }
-    .herotext h4, .primary{
-        padding-inline-start: var(--spacing-margin-medium);
+        top: 25%;
+        left: 0;
+        z-index: 2;
     }
     .herotext img {
         width: 100%;
         height: 100%;
         margin-bottom: var(--spacing-vertical-xsmall);
     }
-    .heroimage img {
-        border-radius: 360px;
+    .herotext h4, .primary{
+        padding-inline-start: var(--spacing-margin-medium);
     }
-    .hero .large {
-        width: 347px;
-        height: 347px;
-        grid-column-start: 3;
-        grid-row-start: 1;
-        object-fit: cover;
-    }
-    .hero .medium {
-        width: 278px;
-        height: 278px;
-        grid-column-start: 4;
-        grid-row-start: 2;
-        object-fit: cover;
-    }
-    .hero .small {
-        width: 186px;
-        height: 186px;
-        grid-column-start: 3;
-        grid-row-start: 2;
-        object-fit: cover;
-        align-self: end;
-    }
+    h4 {
+    color: var(--color-green-100);
+    margin: 10px;
+    padding: 0px;
+}
+
     .heroimage {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: var(--spacing-margin-medium);
+        z-index: 1;
+    }
+    .heroimage img {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .large {
+        width: 347px;
+        height: 347px;
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+    .medium {
+        width: 278px;
+        height: 278px;
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+    }
+    .small {
+        width: 186px;
+        height: 186px;
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        align-self: start;
     }
 .section1, .section2, .section4 {
     display: flex;
@@ -133,17 +159,63 @@ import CardList from "../components/card_list.astro";
     align-items: center;
     justify-content: center;
 }
-.section1,.section2, .section3 {
+/* .section1,.section2, .section3 {
     margin-bottom: var(--spacing-vertical-medium);
-}
+} */
 .section4 {
     margin-bottom: var(--spacing-vertical-large);
 }
 .section1 {
     gap: var(--spacing-vertical-xsmall);
-    margin-top: var(--spacing-vertical-small);
 }
-
+.kunstnerindex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-margin-small);
+}
+.section2 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: url(/public/graphics/index_section2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section2 h3 {color: var(--color-green-200);}
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-margin-medium);
+}
+.timer h5 {
+    color: var(--color-green-200);
+    margin: 0;
+    text-align: center;
+}
+.timer h2 {
+color: var(--color-naturel-100);
+margin: 0;
+text-align: center;
+}
+.section3 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: url(/public/graphics/lightgreen2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .section4 h3 {
     justify-content: flex-start;
     margin-bottom: var(--spacing-vertical-xsmall);
@@ -153,38 +225,12 @@ import CardList from "../components/card_list.astro";
     flex-wrap: wrap;
     gap: var(--spacing-margin-small);
 }
-h4 {
-    color: var(--color-green-100);
-    margin: 10px;
-    padding: 0px;
-}
-h1 {
-    margin: 5px;
-    padding: 5px;
-}
-.kunstnerindex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-margin-small);
-}
-.timer {
-    display: flex;
-    gap: var(--spacing-margin-medium);
-}
-
-.timercomponent {
-    margin-top: var(--spacing-vertical-medium);
-}
-
-.section2 h3 {color: var(--color-green-200);}
-.timer h2, .timer h5 {
-    color: var(--color-green-200);
-    margin: 0;
-    text-align: center;
-}
-.timer h2 {
-  color: var(--color-naturel-100);
-  margin: 0;
-text-align: center;
-}
+@media (max-width: 768px) {
+        .desktop {
+            display: none;
+        }
+        .mobile {
+            display: block;
+        }
+    }
 </style>
