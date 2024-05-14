@@ -1,0 +1,33 @@
+---
+---
+<div class="days">
+<a href="/">Onsdag</a>
+<a href="/">Torsdag</a>
+<a href="/">Fredag</a>
+<a href="/">Lørdag</a>
+</div>
+
+<style>
+
+.days{
+display: flex;
+justify-content: center;
+gap: var(--spacing-vertical-xsmall);
+}
+
+a{
+font-family: "proxima-nova", sans-serif;
+font-weight: 700;
+font-size: 20px;
+line-height: normal;
+text-decoration: none;
+text-transform: uppercase;
+color: var(--color-button-linkbutton-text-default);
+}
+
+a:active{
+text-decoration: underline;
+color: var(--color-button-linkbutton-text-clicked);
+}
+
+</style>
