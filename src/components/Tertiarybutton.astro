@@ -6,21 +6,20 @@
     </a>
 </div>
 <style>
-div {
+div a {
 display: inline-flex;
 padding: 10px var(--spacing-2, 20px);
 justify-content: center;
 align-items: center;
 gap: 10px; 
-}
-a {
 border-radius: 20px;
-background: var(--Color-Button-Tertiarybutton-background-default, #FF9CF9);    
+background: var(--color-button-tertiarybutton-background-default, #FF9CF9);  
+text-decoration: none;
 }
 p {
-color: var(--Color-Button-Tertiarybutton-text-default, #0A0A0A);
+color: var(--color-button-tertiarybutton-text-default, #0A0A0A);
 text-align: center;
-font-family: "Proxima Nova";
+font-family: "proxima-nova", sans-serif;
 font-size: 15px;
 font-style: normal;
 font-weight: 700;
@@ -28,11 +27,11 @@ line-height: normal;
 text-transform: uppercase;
 text-decoration: none;
 }
-a:hover {
-background: var(--Color-Button-Tertiarybutton-background-hover, #E761DF);    
+div a:hover {
+background: var(--color-button-tertiarybutton-background-hover, #E761DF);    
 }
-a:active {
-border: 2px solid var(--Color-Button-Primarybutton-background-Active_stroke, #E761DF);
-background: var(--Color-Button-Tertiarybutton-background-Active_fill, #FF9CF9);    
+div a:active {
+border: 2px solid var(--color-button-primarybutton-background-active_stroke, #E761DF);
+background: var(--color-button-tertiarybutton-background-active_fill, #FF9CF9);    
 }
 </style>

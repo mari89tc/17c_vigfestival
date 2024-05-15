@@ -4,42 +4,138 @@ import Tertiarybutton from "./Tertiarybutton.astro"
 ---
 <header>
   <div class="navigation">
-    <a href="/"><img src="/public/logos/vig_festival_logo.svg" width="55px" height="55px" alt="logo"></a>
-    <div>
+    <a href="/"><img src="/public/logos/vig_festival_logo.svg" width="66px" height="66px" alt="logo"></a>
+    <div class="menu-buttons">
       <Tertiarybutton/>
-        <button>
-          <img src="/public/logos/menu_closed.svg" width="55px" height="27px" alt="menu closed">
-        </button>
+      <button id="burger_menu">
+        menu 
+        <span></span>
+      </button>
     </div>
   </div>
-    <nav>
+    <nav id="menu">
         <ul>
-          <li><a href="/"><NavButton nav="program"/></a></li>
+          <li><a href="/program"><NavButton nav="program"/></a></li>
           <li><a href="/"><NavButton nav="billet"/></a></li>
           <li><a href="/"><NavButton nav="line-up"/></a></li>
-          <li><a href="/"><NavButton nav="info"/></a></li>
-          <li><a href="/"><NavButton nav="frivillig"/></a></li>
+          <li><a href="/info"><NavButton nav="info"/></a></li>
+          <li><a href="/volunteer"><NavButton nav="frivillig"/></a></li>
           <li><a href="/"><NavButton nav="om os"/></a></li>
         </ul>
       </nav>
 </header>
+<script src="/src/scripts/burgermenu.js"></script>
 
 <style>
-.navigation{
-display: flex;
-padding: 20px;
-justify-content: space-between;
-align-items: center;
-}
-div {
-display: flex;
-align-items: center;
-gap: 23px;    
-}
 a {
   text-decoration: none;
 }
 li {
   list-style: none;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: var(--spacing-margin-small);
+}
+.navigation img {
+  width: 100%;
+}
+.menu-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-horisontal-small);
+}
+#burger_menu {
+  text-indent: -9999px;
+  border: none;
+  background: transparent;
+  margin: 25px;
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#burger_menu span,
+#burger_menu span:before,
+#burger_menu span:after {
+  background: var(--color-pink-300);
+  display: block;
+  height: 4px;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  content: "";
+  border-radius: 2px; /* Add rounded corners */
+  width: 55px; /* Ensure width is consistent for all spans */
+}
+
+#burger_menu span:before {
+  top: -12px;
+}
+
+#burger_menu span:after {
+  top: 12px;
+}
+
+/* Hover effect */
+#burger_menu.hover span:before,
+#burger_menu.hover span:after {
+  width: 55px;
+}
+#burger_menu.hover span {
+  width: 40px;
+}
+
+
+/* Close effect */
+#burger_menu.close span:before {
+  top: 0px;
+  transform: rotate(65deg);
+  width: 55px;
+}
+
+#burger_menu.close span {
+  transform: rotate(-32deg);
+  width: 55px;
+}
+
+#burger_menu.close span:after {
+  top: 0px;
+  transform: rotate(65deg);
+  opacity: 0;
+  width: 55px;
+}
+
+/* Menu overlay effect */
+#menu {
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+#menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  background-color: var(--color-background-body);
+  background-image: url(/public/graphics/headgraphic.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 </style>

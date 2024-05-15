@@ -61,10 +61,10 @@ body {
   --color-button-secondarybutton-text-active: var(--color-naturel-100);
   --color-button-secondarybutton-text-default: var(--color-naturel-100);
   --color-button-secondarybutton-text-hover: var(--color-naturel-100);
-  --color-button-tertiarybutton-background-active-fill: var(--color-pink-200);
-  --color-button-tertiarybutton-background-active-stroke: var(--color-pink-300);
-  --color-button-tertiarybutton-background-default: var(--color-pink-200);
-  --color-button-tertiarybutton-background-hover: var(--color-pink-300);
+  --color-button-tertiarybutton-background-active-fill: var(--color-pink-300);
+  --color-button-tertiarybutton-background-active-stroke: var(--color-pink-400);
+  --color-button-tertiarybutton-background-default: var(--color-pink-300);
+  --color-button-tertiarybutton-background-hover: var(--color-pink-400);
   --color-button-tertiarybutton-text-active: var(--color-naturel-500);
   --color-button-tertiarybutton-text-default: var(--color-naturel-500);
   --color-button-tertiarybutton-text-hover: var(--color-naturel-500);
