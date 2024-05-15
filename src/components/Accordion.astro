@@ -2,53 +2,81 @@
 const {head, text, href} = Astro.props;
 ---
 <div class="accordion">
-  <p class="medium">{head}</p>
-<a href={href}> <img src="/logos/dropdown.svg" alt="lille hjerte logo"/></a>
-</div>
-<div class="accordion-content">
-  <p class="medium">{text}</p>
+    <div class="question">
+        <p class="medium">{head}</p>
+        <a href={href}> <img src="/logos/dropdown.svg" alt="pil til dropdown"/></a>
+    </div>
+    <div class="answer">
+        <p class="small">{text}</p>
+    </div>
 </div>
 <style>
 
 .accordion {
+    cursor: pointer;
+    width: 680px;
+    border-radius: var(--spacing-corner-radius-small);
+}
+
+.question {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 680px;
     background-color: var(--color-green-400);
+    justify-content: space-between;
     padding: var(--spacing-margin-small);
     border-radius: var(--spacing-corner-radius-small);
 }
 
-.accordion-content {
-    display: none; /* Start hidden */
-    width: 680px;
-    padding: var(--spacing-margin-small);
-    background-color: var(--color-green-300);
-    border-radius: var(--spacing-corner-radius-small);
-    margin-top: var(--spacing-margin-small);
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease;
 }
+
+.answer p {
+    background-color: var(--color-green-400);
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 2px;
+    padding: var(--spacing-margin-small);
+    border-radius: var(--spacing-corner-radius-small);
+}
+
+.accordion_active .answer{
+    max-height: 300px;
+}
+
+.accordion_active img{
+    transform: rotate(180deg);
+}
+
+img {
+    transition: transform 0.4s ease-in;
+}
+
 p {
     margin: 0;
     padding: 0;
     color: var(--color-text-normaltext-white);
 }
 
-.accordion-content p {
-    margin: 0;
-    padding: 0;
-    color: var(--color-text-normaltext-white);
+ @media (max-width: 700px) {
+    .accordion{
+     width: 400px;  }
+    p {
+  font-size: 18px;
 }
+     }
 
-.accordion.active + .accordion-content {
-    display: block; /* Show when active */
-}
 </style>
 
 <script>
-function toggleAccordion(event) {
-    event.preventDefault();
-    const accordion = event.target.closest('.accordion');
-    accordion.classList.toggle('active');
-}
+
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(accordion => {
+        accordion.addEventListener("click", () => {
+            accordion.classList.toggle("accordion_active");
+        });
+    });
+
 </script>
