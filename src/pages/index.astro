@@ -79,85 +79,86 @@ import CardList from "../components/card_list.astro";
     </section>
 </Main>
 <style>
-    .hero {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: var(--spacing-vertical-small);
-        overflow: hidden;
-    }
-    .hero-background {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-    .hero-background img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .mobile {
-        display: none;
-    }
-    .herotext {
-        position: absolute;
-        top: 25%;
-        left: 0;
-        z-index: 2;
-    }
-    .herotext img {
-        width: 100%;
-        height: 100%;
-        margin-bottom: var(--spacing-vertical-xsmall);
-    }
-    .herotext h4, .primary{
-        padding-inline-start: var(--spacing-margin-medium);
-    }
-    h4 {
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: var(--spacing-vertical-small);
+    overflow: hidden;
+}
+.hero-background {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mobile {
+    display: none;
+}
+.herotext {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    z-index: 2;
+}
+.herotext img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: var(--spacing-vertical-xsmall);
+}
+.herotext h4, .primary{
+    padding-inline-start: var(--spacing-margin-medium);
+}
+h4 {
     color: var(--color-green-100);
     margin: 10px;
     padding: 0px;
 }
-
-    .heroimage {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: var(--spacing-margin-medium);
-        z-index: 1;
-    }
-    .heroimage img {
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    .large {
-        width: 347px;
-        height: 347px;
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
-    }
-    .medium {
-        width: 278px;
-        height: 278px;
-        grid-column: 4 / 5;
-        grid-row: 2 / 3;
-    }
-    .small {
-        width: 186px;
-        height: 186px;
-        grid-column: 3 / 4;
-        grid-row: 2 / 3;
-        align-self: start;
-    }
-.section1, .section2, .section4 {
+.heroimage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--spacing-margin-medium);
+    z-index: 1;
+}
+.heroimage img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+.large {
+    width: 347px;
+    height: 347px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+.medium {
+    width: 278px;
+    height: 278px;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    align-self: start;
+}
+.small {
+    width: 186px;
+    height: 186px;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    align-self: start;
+}
+.section1, .section2, .section3, .section4 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: var(--spacing-vertical-medium);
 }
 .section4 {
     margin-bottom: var(--spacing-vertical-large);
@@ -171,8 +172,8 @@ import CardList from "../components/card_list.astro";
     gap: var(--spacing-margin-small);
 }
 .section2 {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     position: relative;
     background-image: url(/public/graphics/index_section2.png);
     background-size: cover;
@@ -196,13 +197,13 @@ import CardList from "../components/card_list.astro";
     text-align: center;
 }
 .timer h2 {
-color: var(--color-naturel-100);
-margin: 0;
-text-align: center;
+    color: var(--color-naturel-100);
+    margin: 0;
+    text-align: center;
 }
 .section3 {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     position: relative;
     background-image: url(/public/graphics/lightgreen2.png);
     background-size: cover;
@@ -223,11 +224,52 @@ text-align: center;
     gap: var(--spacing-margin-small);
 }
 @media (max-width: 768px) {
-        .desktop {
-            display: none;
-        }
-        .mobile {
-            display: block;
-        }
-    }
+.desktop {
+    display: none;
+}
+.mobile {
+    display: block;
+    height: fit-content;
+}
+.heroimage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--spacing-margin-medium);
+    z-index: 1;
+}
+.heroimage img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+.large {
+    width: 222px;
+    height: 222px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.medium {
+    width: 139px;
+    height: 139px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: end;
+}
+.small {
+    width: 135px;
+    height: 135px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    
+}
+.primary {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-inline-start: 0px;
+}
+.section1, .section2, .section3, .section4 {
+    margin-bottom: var(--spacing-vertical-small); 
+}
+}
 </style>
