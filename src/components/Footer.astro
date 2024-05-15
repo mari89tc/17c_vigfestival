@@ -5,28 +5,28 @@
     <div class="flex_text">
         <div class="boks_1">
             <h6>Kontakt</h6>
-        <a href="">Holbækvej 16B 4560 Vig Sjælland</a>
-        <a href="">59 31 64 68</a>
-        <a href="mailto:Info@vigfestival.dk">Info@vigfestival.dk</a>
-    </div>
-    <div class="boks_2">
-        <h6>Erhverv</h6>
-        <a href="">Sportslegat</a>
-        <a href="">Uddeling af overskud</a>
-        <a href="">Sponsorer</a>
-        <a href="">Privatlivspolitik</a>
-        <a href="">Eksterne boder</a>
-        <a href="">Den Rytmiske Højskole</a>
-    </div>
-    <div class="boks_3">
-        <h6>Indhold</h6>
-        <a href="/">Nyheder</a>
-        <a href="/">Info</a>
-        <a href="/">Kort over Pladsen</a>
-        <a href="/">Om festivalen</a>
-        <a href="/">Frivillig login</a>
-        <a href="">Ledige stillinger</a>
-    </div>
+            <a href="">Holbækvej 16B 4560 Vig Sjælland</a>
+            <a href="">59 31 64 68</a>
+            <a href="mailto:Info@vigfestival.dk">Info@vigfestival.dk</a>
+        </div>
+        <div class="boks_2">
+            <h6>Erhverv</h6>
+            <a href="">Sportslegat</a>
+            <a href="">Uddeling af overskud</a>
+            <a href="">Sponsorer</a>
+            <a href="">Privatlivspolitik</a>
+            <a href="">Eksterne boder</a>
+            <a href="">Den Rytmiske Højskole</a>
+        </div>
+        <div class="boks_3">
+            <h6>Indhold</h6>
+            <a href="/">Nyheder</a>
+            <a href="/">Info</a>
+            <a href="/">Kort over Pladsen</a>
+            <a href="/">Om festivalen</a>
+            <a href="/">Frivillig login</a>
+            <a href="">Ledige stillinger</a>
+        </div>
     </div>
     <div class="boks_4">
         <a href="/"> <img class="vf_img" src="/public/logos/vig_festival_logo.svg" alt="Vig festival logo" /></a>
@@ -50,7 +50,8 @@ flex-wrap: wrap;}
 
 .flex_text {
     display: flex;
-   gap: 100px;
+    flex-wrap: wrap;
+   gap: var(--spacing-vertical-xsmall);
 }
 
 .boks_1, .boks_2, .boks_3{
@@ -70,9 +71,6 @@ flex-wrap: wrap;}
     text-align: center;
     gap: var(--spacing-1);
   }
-
-
-
   .some_img {
     width: 25%;
     gap: var(--spacing-margin-medium);
@@ -102,4 +100,22 @@ padding-inline-start: 10px;
     line-height: 20px;
     max-width: 200px;
     text-align:center}
+
+
+    @media (max-width: 600px) {
+
+
+      .boks_4 {
+        order: -1;
+        margin-bottom: var(--spacing-vertical-xsmall);
+      }
+
+           .boks_2 {
+        order: -1;
+      }
+      .boks_3 {
+        order: -1;
+      }
+  }
+
 </style>
