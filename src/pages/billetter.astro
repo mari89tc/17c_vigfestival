@@ -1,0 +1,32 @@
+---
+import BilletLarge from "../components/Billet_large.astro";
+import Header from "../components/Header.astro"
+import Main from "../layouts/main.astro"
+import Navigation from "../components/Navigation.astro"
+import BilletSmall from "../components/Billet_small.astro";
+---
+<Main title="Billetter">
+<Navigation/>
+<Header heading="Billetter"/>
+<section class="section1">
+    <BilletLarge head="Familiebillet" price="2125,-" date="10. - 13. juli"/>
+    <BilletLarge head="Familiebillet" price="2125,-" date="10. - 13. juli"/>
+    <BilletSmall head="Torsdag" price="925,-" date="11. juli"/>
+    <BilletSmall head="fredag" price="1025,-" date="12. juli"/>
+    <BilletSmall head="lørdag" price="1025,-" date="13. juli"/>
+</section>
+</Main>
+
+<style>
+
+.section1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-vertical-xsmall);
+    max-width: 1000px;
+    align-items: center;
+    place-items: center;
+    justify-content: center;   
+    margin: 0 auto;
+}
+</style>
