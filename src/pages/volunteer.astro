@@ -28,7 +28,6 @@ import Logind from "../components/Logind.astro"
 </section>
 <section class="section2">
     <div class="testimonial">
-        <!-- <img src="image/volunteer/quote.png" alt="quote"> -->
         <p class="large">Jeg har haft en super oplevelse som frivillig på Vig Festival,<br> det har givet mig en unik mulighed for at <br> være en del af noget større.</p>
         <p class="medium">-Sofie, 23 år, frivillig</p>
     </div>
@@ -115,6 +114,10 @@ import Logind from "../components/Logind.astro"
 @media (max-width: 768px) {
     .desktop {
         display: none;
+    }
+    .testimonial .medium {
+        font-size: 18px;
+        padding-top: 5px;
     }
     .mobile {
         display: block;
