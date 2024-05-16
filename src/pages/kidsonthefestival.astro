@@ -19,9 +19,15 @@ import Navigation from "../components/Navigation.astro";
 </section>
 <section class="section3">
     <h3>Oplev stemningen i Viggos Verden</h3>
-    <video width="100%" height="100%" controls muted loop>
-        <source src="image/kids/kids_video.mp4" type="video/mp4" />
-    </video>
+    <div>
+        <video id="desktopVideo" class="desktop" width="100%" height="100%"  muted loop>
+            <source src="image/kids/kids_video.mp4" type="video/mp4" />
+        </video>
+        <video id="mobileVideo" class="mobile" width="100%" height="100%"  muted loop>
+            <source src="image/kids/kids_mobile.mp4" type="video/mp4" />
+        </video>
+        <button id="playPauseButton" class="play-button"></button>
+    </div>
 </section>
 <section class="section4">
     <InfoSquare head="Frivillig som barn" text="Vidste du, at du kan tage dit barn med som hjælper, hvis barnet ikke er fyldt 16 år! På den måde kan i tilbringe tid sammen på festivalen og bidrage til et større fællesskab!"/>
@@ -73,8 +79,99 @@ background-repeat: no-repeat;
 height: 130vh;  
 }
 video {
+display: flex;
 width: 60%;
 height: auto;
 border-radius: var(--spacing-corner-radius-medium, 20px);
 }
+
+.desktop {
+    position: relative;
+    left: 20%;
+}
+button {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    border: none;
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 360px;
+    background-color: var(--color-green-100);
+    color: var(--color-cards-round-text-default);
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-pink-200);
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.play-button::after {
+    content: 'afspil';
+}
+
+.pause-button::after {
+    content: 'pause';
+}
+
+.mobile {
+display: none;
+}
+
+@media (max-width: 1000px) {
+    .desktop {
+display: none;
+}
+.mobile {
+    display:block;
+    position: relative;
+    left: 20%;
+    width: 60%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+}
+}
 </style>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const desktopVideo = document.getElementById("desktopVideo");
+    const mobileVideo = document.getElementById("mobileVideo");
+    const playPauseButton = document.getElementById("playPauseButton");
+
+    function togglePlayPause(video) {
+        if (video.paused) {
+            video.play();
+            playPauseButton.classList.remove("play-button");
+            playPauseButton.classList.add("pause-button");
+        } else {
+            video.pause();
+            playPauseButton.classList.remove("pause-button");
+            playPauseButton.classList.add("play-button");
+        }
+    }
+
+    playPauseButton.addEventListener("click", function() {
+        if (window.innerWidth > 1000) {
+            togglePlayPause(desktopVideo);
+        } else {
+            togglePlayPause(mobileVideo);
+        }
+    });
+});
+
+</script>
