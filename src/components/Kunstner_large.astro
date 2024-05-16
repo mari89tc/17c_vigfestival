@@ -1,14 +1,12 @@
 ---
 const {href,img, alt, text} = Astro.props;
 ---
-<div>
-    <a href={href}>
+ <a href={href}>
         <img src={img} alt={alt}>
         <h5>{text}</h5>
     </a>
-</div>
 <style>
-div {
+a {
 position: relative;
 justify-content: center;
 align-items: center;
@@ -16,16 +14,14 @@ border-radius: 360px;
 width: 272px;
 height: 272px;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+text-decoration: none;
 }
 img {
 height: 100%;
 width: 100%;
+border-radius: 360px;  
 object-fit: cover;
-border-radius: 360px; 
 background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), lightgray 50% / cover no-repeat;
-}
-a {
-text-decoration: none;
 }
 h5 {
 color: var(--Color-naturel-100, #FFFFF3);
@@ -36,31 +32,33 @@ left: 10%;
 width: 80%;
 line-height: 30px;
 }
-div:hover {
+a:hover {
 background: var(--Color-Cards-round-background-hover, #FFD9FD);
 }
-div:hover h5 {
+a:hover h5 {
 color: var(--Color-naturel-500, #0A0A0A);
 }
-div:hover img {
+a:hover img {
     display:none;
 }
-div:active{
+a:active{
 background: var(--Color-Cards-round-background-active, #FF9CF9);
 }
-div:active h5 {
+a:active h5 {
 color: var(--Color-text-normaltext_black, #0A0A0A);
 }
-div:active img {
+a:active img {
     display:none;
 }
 @media (max-width: 700px) {
-div {
+a {
 width: 170px;
 height: 170px;
 }
 h5 {
-width: 160px;
+    text-wrap: wrap;
+    top: 15%;
+    left: 10%;
 }
 }
 </style>
