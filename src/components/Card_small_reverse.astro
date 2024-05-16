@@ -14,7 +14,7 @@ const { head, img, alt, href, text, maintext} = Astro.props;
 .content {
 display: flex;
 align-items: center;
-align-content: center;
+justify-content: center;
 gap: var(--spacing-4) var(--spacing-2, 20px);
 flex-wrap: wrap;
 margin-left: var(--spacing-margin-small);
@@ -48,6 +48,9 @@ object-fit: cover;
 .image {
 width: 360px;
 height: 360px;
+}
+.text {
+padding: 0px;    
 }
 }
 </style>

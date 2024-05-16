@@ -15,10 +15,10 @@ import Navigation from "../components/Navigation.astro"
 <Navigation/>
 <div class="head">
         <img class="desktop" src="graphics/frivilliggraphic.png" alt="grafik heading">
-        <img class="mobile" src="graphics/mobilefrivillig.png" alt="grafik heading">
+        <img class="mobile" src="graphics/mobilefrivillig.svg" alt="grafik heading">
     <div class="head_text">
         <h2>Frivillig</h2>
-        <p class="large">Vil du være en del af fællesskabet, så bliv en del <br>  af frivilligteamet på Vig Festival</p>
+        <p class="large">Vil du være en del af fællesskabet, så bliv en del af frivilligteamet på Vig Festival</p>
         <Primarybutton href="" text="Bliv frivillig"/>
     </div>
 </div>
@@ -64,6 +64,7 @@ import Navigation from "../components/Navigation.astro"
     margin: 0;
     position: absolute;
     text-align: center;
+    width: 50%;
     }
 .head_text h2, .large {
     gap: var(--spacing-margin-medium);
@@ -124,12 +125,20 @@ import Navigation from "../components/Navigation.astro"
     .mobile {
         display: block;
     }
+    .head {
+        margin-bottom: var(--spacing-vertical-xsmall);
+    }
+    .head_text{
+        padding-left: var(--spacing-horisontal-xsmall);
+        padding-right: var(--spacing-horisontal-xsmall);
+        width:80%;
+    }
     .section1, .section2, .section3, .section4{
     margin-bottom: var(--spacing-vertical-small);
 }
     .section2 {
         background-image: url(/public/graphics/mobile_section2.svg);
-        height: 220vh;
+        height: 200vh;
     }
 }
 </style>
