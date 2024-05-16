@@ -5,10 +5,9 @@ import Primarybutton from "../components/Primarybutton.astro";
 import KunstnerLarge from "../components/Kunstner_large.astro";
 import Secondarybutton from "../components/Secondarybutton.astro";
 import CardSmall from "../components/Card_small.astro";
-import CardSmallReverse from "../components/Card_small_reverse.astro";
 import Heartlist from "../components/Heartlist.astro";
 import Nyheder from "../components/Nyheder.astro";
-import CardList from "../components/card_list.astro";
+import CardList from "../components/Card_list.astro";
 import Navigation from "../components/Navigation.astro";
 ---
 <Main title="Forside">
@@ -16,7 +15,7 @@ import Navigation from "../components/Navigation.astro";
     <div class="hero">
         <div class="hero-background">
             <img class="desktop" src="graphics/herographic.png" alt="hero graphic">
-            <img class="mobile" src="graphics/mobilehero.png" alt="hero graphic">
+            <img class="mobile" src="graphics/mobilehero.svg" alt="hero graphic">
         </div>
         <div class="herotext">
             <h4>En fest for hele familien</h4>
@@ -171,11 +170,11 @@ h4 {
 .kunstnerindex {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: var(--spacing-margin-small);
 }
 .section2 {
-    /* margin: 0;
-    padding: 0; */
     position: relative;
     background-image: url(/public/graphics/index_section2.png);
     background-size: cover;
@@ -204,8 +203,6 @@ h4 {
     text-align: center;
 }
 .section3 {
-    /* margin: 0;
-    padding: 0; */
     position: relative;
     background-image: url(/public/graphics/lightgreen2.png);
     background-size: cover;
@@ -223,6 +220,8 @@ h4 {
 .nyheder {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: var(--spacing-margin-small);
 }
 @media (max-width: 768px) {
@@ -231,7 +230,9 @@ h4 {
 }
 .mobile {
     display: block;
-    height: fit-content;
+}
+.hero {
+    padding-bottom: var(--spacing-vertical-medium);
 }
 .heroimage {
     display: grid;
@@ -272,6 +273,15 @@ h4 {
 }
 .section1, .section2, .section3, .section4 {
     margin-bottom: var(--spacing-vertical-small); 
+}
+.section2 {
+    background-image: url(/public/graphics/mobileindexsection2.svg);
+    height: 180vh; 
+    gap: var(--spacing-vertical-xsmall);
+}
+.section3 {
+    background-image: url(/public/graphics/mobilelightgreen2.svg);
+    height: 170vh;
 }
 }
 </style>
