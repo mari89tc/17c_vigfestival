@@ -1,0 +1,48 @@
+---
+export async function getStaticPaths() {
+  const url = "https://eaywzeuvibbrhpsjauqe.supabase.co/rest/v1/artists";
+  const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVheXd6ZXV2aWJicmhwc2phdXFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU2MjY3MzQsImV4cCI6MjAzMTIwMjczNH0.E4226TKZ9T067NHyW7Y-j3Vy9pT9TkkMJdLGv70sWWk";
+  const options = {
+    method: "GET",
+    headers: {
+      apikey: api,
+    },
+  };
+  const data = await fetch(url, options).then((res) => res.json());
+  console.log(data);
+  return data.map((singleArtist) => {
+    console.log(singleArtist.slug);
+    return {
+      params: { slug: singleArtist.slug },
+      props: { singleArtist },
+    };
+  });
+}
+const { singleArtist } = Astro.props;
+
+import Header from "../components/Header.astro"
+import Main from "../layouts/main.astro"
+import Navigation from "../components/Navigation.astro"
+import Secondarybutton from "../components/Secondarybutton.astro";
+---
+<Main title="Kunstner">
+    <Navigation/>
+    <Header heading={singleArtist.artist}/>
+    <section>
+        <img src="/public/logos/back_button.svg" alt="back button">
+        <div>
+            <h5>{singleArtist.time}</h5>
+            <p class="small">{singleArtist.text}</p>
+            <Secondarybutton href="/program" text="Se programmet"/>
+        </div>
+        <div>
+            <img src={singleArtist.img} alt={singleArtist.artist}>
+            <img src="/public/logos/s" alt="spotify.svg">
+        </div>
+    </section>
+    </Main>
+<style>
+    section {
+        display: flex;
+    }
+</style>
