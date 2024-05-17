@@ -1,0 +1,42 @@
+---
+// RoundbuttonBilletSmall.astro
+const { text } = Astro.props;
+---
+<div class="roundbutton">
+  <a href="/">
+    <p class="linkbuttontext">{text}</p>
+  </a>
+</div>
+
+<style>
+.roundbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roundbutton a {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 360px;
+  background: transparent;
+  color: transparent;
+}
+.roundbutton a:hover {
+  background: var(--Color-Button-Roundbutton-background-hover, #FFD9FD);
+  color: var(--Color-Button-Roundbutton-text-hover);
+}
+.linkbuttontext:hover {
+  color: var(--Color-Button-Roundbutton-text-hover, #0A0A0A);
+}
+.roundbutton a:active {
+  background: var(--Color-Button-Roundbutton-background-Active, #FF9CF9);
+}
+.linkbuttontext:active {
+  color: var(--Color-Button-Roundbutton-text-hover, #0A0A0A);
+}
+</style>
