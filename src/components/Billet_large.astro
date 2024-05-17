@@ -1,66 +1,147 @@
 ---
-const {head, price, date} = Astro.props;
-import RoundbuttonBillet from "./Roundbutton_billet.astro";
+const {head, price, date, fewLeft} = Astro.props;
+import ScarcityLabelFtilbage from "./Scarcity_label_fåtilbage.astro";
 ---
 <div class="large_card">
+{fewLeft && <div><ScarcityLabelFtilbage/></div>}
+    <div class="roundbutton">
+        <a href="/">
+        <p class="linkbuttontext">køb her</p>
+        </a>
+    </div>
     <a href="/"> 
-        <RoundbuttonBillet text="Køb her"/>
-       <div class="udsolgt"><slot/></div>
-      <div class="fotilbage"><slot/></div>
+        <div class="udsolgt"><slot/></div>
+        <div class="fotilbage"><slot/></div>
         <h3>{head}</h3>
         <h5 class="price">{price}</h5>
-        <div class="date"><h5>{date}</h5>
-        </div>
+        <div class="date"><h5>{date}</h5></div>
     </a>   
 </div>
 
 <style>
-.large_card{
-position: relative;
-display: flex;
-flex-direction: column;
-width: 426px;
-height: 426px;
-background-color: var(--color-cards-ticket-background-default);
-border-radius: var(--spacing-corner-radius-medium);
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    .large_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 426px;
+    height: 426px;
+    background-color: var(--color-cards-ticket-background-default);
+    border-radius: var(--spacing-corner-radius-medium);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
+a {
+    text-decoration: none;
+}
+
 h3 {
-color: var(--Color-Cards-ticket-text-main, #174128);
-margin-top: 35%;
-text-align: center;  
-text-transform: uppercase;  
+    color: var(--Color-Cards-ticket-text-main, #174128);
+    margin-top: 35%;
+    text-align: center;
+    text-transform: uppercase;
 }
+
 .price {
-color: var(--Color-Cards-ticket-text-main, #174128);
-margin: var(--spacing-margin-small);
-text-align: center;    
+    color: var(--Color-Cards-ticket-text-main, #174128);
+    margin: var(--spacing-margin-small);
+    text-align: center;
 }
+
 .date {
-display: flex;
-padding: 0px 20px;
-align-items: flex-end;
-gap: 10px;
-flex: 1 0 0;
-align-self: stretch; 
+    display: flex;
+    padding: 100px 20px;
+    align-items: flex-end;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
 }
-.date h5{
-color: var(--Color-Cards-ticket-text-date, #D7F19F);
-text-transform: uppercase;
-margin: 0;
-padding: 0;
+
+.date h5 {
+    color: var(--Color-Cards-ticket-text-date, #D7F19F);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
 }
-.large_card:hover{
-background: var(--Color-Cards-ticket-background-hover, #174128); 
-color: var(--color-green-400);
+
+.large_card:hover {
+    background: var(--Color-Cards-ticket-background-hover, #174128);
+    color: var(--color-green-400);
 }
+
 .large_card:active {
-background: var(--Color-Cards-ticket-background-hover, #174128); 
-color: var(--color-green-400);
+    background: var(--Color-Cards-ticket-background-hover, #174128);
+    color: var(--color-green-400);
 }
 
 .large_card:hover .date {
     display: none;
 }
 
+.roundbutton {
+    display: none;
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.large_card:hover .roundbutton {
+    display: flex;
+}
+
+.roundbutton a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: var(--Color-Button-Roundbutton-background-hover, #FFD9FD);
+    color: var(--Color-Button-Roundbutton-text-hover, #0A0A0A);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roundbutton a:active {
+    background: var(--Color-Button-Roundbutton-background-Active, #FF9CF9);
+}
+
+.linkbuttontext {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+}
+
+.linkbuttontext p {
+    margin: 0;
+    padding: 0;
+}
+
+.linkbuttontext p:hover, .linkbuttontext p:active {
+    color: var(--Color-Button-Roundbutton-text-hover, #0A0A0A);
+}
+
+@media (max-width: 700px) {
+   
+    .large_card {
+    width: 289px;
+} 
+.roundbutton {
+    left: 30%;
+}
+
+    .date {
+    padding: 170px 20px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+h3{
+  font-size: 36px;
+}
+}
 </style>
