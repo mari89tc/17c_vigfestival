@@ -1,29 +1,27 @@
 ---
-import BilletLarge from "../components/Billet_large.astro";
 import Header from "../components/Header.astro"
 import Main from "../layouts/main.astro"
+import BilletTransport from "../components/Billet_transport.astro";
 import Navigation from "../components/Navigation.astro"
-import BilletSmall from "../components/Billet_small.astro";
+import Cta from "../components/Cta.astro";
 ---
-<Main title="Billetter">
+<Main title="Transport">
 <Navigation/>
-<Header heading="Billetter"/>
+<Header heading="Transport"/>
 <section class="section1">
 <div class="label"> <a href="/camping">Camping</a></div>
-<div class="clicked"> <a href="/billetter">billetter</a></div>
-<div class="label"> <a href="/transport">transport</a></div>
+<div class="label"> <a href="/billetter">billetter</a></div>
+<div class="clicked"> <a href="/transport">transport</a></div>
 </section>
 <section class="section2">
-    <BilletLarge head="Familiebillet" price="2125,-" date="10. - 13. juli" />
-    <BilletLarge head="Partoutbillet" price="1825,-" date="10. - 13. juli"fewLeft={true}/>
-    <BilletSmall head="Torsdag" price="925,-" date="11. juli"/>
-    <BilletSmall head="fredag" price="1025,-" date="12. juli" soldOut={true}/>
-    <BilletSmall head="lørdag" price="1025,-" date="13. juli"/>
+    <BilletTransport head="Betalings parkering" text="For dig der ønsker at parkere trygt nær festivalen. "/>
+    <BilletTransport head="Festivalbus" text="Mulighed for at blive kørt til og fra festivalen, så du kan lade bilen stå."/>
+</section>
+<section class="section3">
+    <Cta head="Vil du vide mere om dine muligheder for transport og parkering?" href="" text="Se info"/>
 </section>
 </Main>
-
 <style>
-
 .section1 {
 margin-top: var(--spacing-vertical-xsmall);
 margin-bottom: var(--spacing-vertical-xsmall);
@@ -61,15 +59,14 @@ color: var(--color-button-linkbutton-text-clicked);
     place-items: center;
     justify-content: center;   
     margin: 0 auto;
+}
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    margin-top: var(--spacing-vertical-medium);
     margin-bottom: var(--spacing-vertical-large);
 }
- 
-@media (max-width: 700px) {
-    .section1 {
-    gap: var(--spacing-2);
-    }
-  a{
-font-size: 18px;
-    }
-    }
 </style>

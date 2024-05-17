@@ -1,48 +1,121 @@
 ---
 const {head, text} = Astro.props;
-import Roundbutton from "./Roundbutton.astro";
 ---
-<div>
-<a href="/"> 
-<Roundbutton text="Køb her"/>
-<div class="space"></div>
-<h3>{head}</h3>
-<p class="small">{text}</p>
-</div>
-</a>   
+<div class="transport_card">
+    <div class="roundbutton">
+        <a href="/">
+        <p class="linkbuttontext">køb her</p>
+        </a>
+    </div>
+    <a href="/"> 
+        <div class="udsolgt"><slot/></div>
+        <div class="fotilbage"><slot/></div>
+        <h3>{head}</h3>
+        <p class="small">{text}</p>
+    </a>   
 </div>
 
 <style>
-div{
-width: 426px;
-height: 426px;
-flex-shrink: 0; 
-border-radius: 20px;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    .transport_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 426px;
+    height: 426px;
+    background-color: var(--color-cards-ticket-background-default);
+    border-radius: var(--spacing-corner-radius-medium);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 a {
-background: var(--Color-Cards-ticket-background-default, #B6D475);
+    text-decoration: none;
 }
+
 h3 {
-color: var(--Color-Cards-ticket-text-main, #174128);
-text-align: center;    
+    color: var(--Color-Cards-ticket-text-main, #174128);
+    margin-top: 35%;
+    text-align: center;
+    text-transform: uppercase;
 }
-.small {
-color: var(--Color-Cards-ticket-text-main, #174128);
-text-align: center;    
+
+.small{
+    color: var(--Color-Cards-ticket-text-main, #174128);
+    margin: var(--spacing-margin-small);
+    text-align: center;
 }
-.space {
-display: flex;
-width: 426px;
-height: 229px;
-flex-direction: column;
-align-items: flex-start;
-gap: 10px;
-flex-shrink: 0;   
+
+.transport_card:hover {
+    background: var(--Color-Cards-ticket-background-hover, #174128);
+    color: var(--color-green-400);
 }
-a:hover{
-background: var(--Color-Cards-ticket-background-hover, #174128); 
+
+.transport_card:active {
+    background: var(--Color-Cards-ticket-background-hover, #174128);
+    color: var(--color-green-400);
 }
-a:active {
-background: var(--Color-Cards-ticket-background-hover, #174128); 
+
+.transport_card:hover .date {
+    display: none;
 }
+
+.roundbutton {
+    display: none;
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.transport_card:hover .roundbutton {
+    display: flex;
+}
+
+.roundbutton a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: var(--Color-Button-Roundbutton-background-hover, #FFD9FD);
+    color: var(--Color-Button-Roundbutton-text-hover, #0A0A0A);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roundbutton a:active {
+    background: var(--Color-Button-Roundbutton-background-Active, #FF9CF9);
+}
+
+.linkbuttontext {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+}
+
+.linkbuttontext p {
+    margin: 0;
+    padding: 0;
+}
+
+.linkbuttontext p:hover, .linkbuttontext p:active {
+    color: var(--Color-Button-Roundbutton-text-hover, #0A0A0A);
+}
+
+@media (max-width: 700px) {
+   
+    .transport_card {
+    width: 289px;
+} 
+.roundbutton {
+    left: 30%;
+}
+
+h3{
+  font-size: 36px;
+}
+}
+
+</style>
