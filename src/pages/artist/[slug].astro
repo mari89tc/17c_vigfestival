@@ -20,10 +20,10 @@ export async function getStaticPaths() {
 }
 const { singleArtist } = Astro.props;
 
-import Header from "../components/Header.astro"
-import Main from "../layouts/main.astro"
-import Navigation from "../components/Navigation.astro"
-import Secondarybutton from "../components/Secondarybutton.astro";
+import Header from "../../components/Header.astro"
+import Main from "../../layouts/main.astro"
+import Navigation from "../../components/Navigation.astro"
+import Secondarybutton from "../../components/Secondarybutton.astro";
 ---
 <Main title="Kunstner">
     <Navigation/>
@@ -36,13 +36,18 @@ import Secondarybutton from "../components/Secondarybutton.astro";
             <Secondarybutton href="/program" text="Se programmet"/>
         </div>
         <div>
-            <img src={singleArtist.img} alt={singleArtist.artist}>
-            <img src="/public/logos/s" alt="spotify.svg">
+            <img class="artist_img" src={"/lineup/" + singleArtist.img} alt={singleArtist.artist}>
+            <img src="/public/logos/spotify.svg" alt="spotify.svg">
         </div>
     </section>
     </Main>
 <style>
     section {
         display: flex;
+    }
+    .artist_img {
+      height: 100%;
+width: 100%;
+border-radius: 360px;
     }
 </style>
