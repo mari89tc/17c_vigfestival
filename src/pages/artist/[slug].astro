@@ -54,7 +54,7 @@ import Secondarybutton from "../../components/Secondarybutton.astro";
   flex-wrap: wrap;
   margin-left: var(--spacing-margin-small);
   margin-right: var(--spacing-margin-medium);
-  margin-bottom: var(--spacing-vertical-medium);
+  margin-bottom: var(--spacing-vertical-large);
 }
 .text {
   display: flex;
@@ -90,5 +90,26 @@ p {
   right: 5%;
   width: 106px;
   height: 106px;
+}
+@media (max-width: 700px) {
+.indhold{
+  margin-left: var(--spacing-margin-medium);
+  margin-right: var(--spacing-margin-medium);
+  margin-bottom: var(--spacing-vertical-medium);
+}
+.text {
+padding: 0px;    
+}
+.artist_img{
+width: 360px;
+height: 360px;
+}
+.image a {
+  position: absolute;
+  top: 45%;
+  right: 7%;
+  width: 106px;
+  height: 106px;
+}
 }
 </style>
