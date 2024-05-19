@@ -3,7 +3,7 @@
 import Main from "../layouts/main.astro"
 import "../styles/global.css";
 import Primarybutton from "../components/Primarybutton.astro";
-import Kunstner from "../components/Kunstner.astro";
+import Kunstner_forside from "../components/Kunstner_forside.astro";
 import Secondarybutton from "../components/Secondarybutton.astro";
 import CardSmall from "../components/Card_small.astro";
 import Heartlist from "../components/Heartlist.astro";
@@ -31,12 +31,12 @@ import Navigation from "../components/Navigation.astro";
     </div>
     <section class="section1">
         <h3>Et program fyldt med fede artister!</h3>
-        <!-- <div class="kunstnerindex">
-            <Kunstner href="" img="/image/artist/rasmus_seebach.webp" alt="Rasmus seebach" text="Rasmus Seebach"/>
-            <Kunstner href="" img="/image/artist/rasmus_seebach.webp" alt="Rasmus seebach" text="Rasmus Seebach"/>
-            <Kunstner href="" img="/image/artist/rasmus_seebach.webp" alt="Rasmus seebach" text="Rasmus Seebach"/>
-            <Kunstner href="" img="/image/artist/rasmus_seebach.webp" alt="Rasmus seebach" text="Rasmus Seebach"/>
-        </div> -->
+        <div class="kunstnerindex">
+            <Kunstner_forside img="rasmus_seebach.webp" alt="Rasmus seebach" head="Rasmus Seebach"/>
+            <Kunstner_forside img="nikogjay.webp" alt="Nik og Jay" head="Nik & Jay"/>
+            <Kunstner_forside img="andreasodbjerg.webp" alt="Andreas Odbjerg" head="Andreas Odbjerg"/>
+            <Kunstner_forside img="medina.webp" alt="Medina" head="Medina"/>
+        </div> 
         <Secondarybutton href="program" text="Se programmet"/>
     </section>
     <section class="section2">
