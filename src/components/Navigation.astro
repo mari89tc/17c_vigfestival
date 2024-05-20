@@ -67,7 +67,6 @@ ul {
   align-items: center;
   justify-content: center;
 }
-#burger_menu span,
 #burger_menu span:before,
 #burger_menu span:after {
   background: var(--color-pink-300);
@@ -78,6 +77,16 @@ ul {
   content: "";
   border-radius: 2px;
   width: 55px;
+}
+#burger_menu span {
+  background: var(--color-pink-300);
+  display: block;
+  height: 4px;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  content: "";
+  border-radius: 2px;
+  width: 40px;
 }
 
 #burger_menu span:before {
@@ -90,13 +99,9 @@ ul {
 
 /* Hover effect */
 #burger_menu.hover span:before,
-#burger_menu.hover span:after {
+#burger_menu.hover span:after, #burger_menu.hover span {
   width: 55px;
 }
-#burger_menu.hover span {
-  width: 40px;
-}
-
 
 /* Close effect */
 #burger_menu.close span:before {
@@ -104,12 +109,10 @@ ul {
   transform: rotate(65deg);
   width: 55px;
 }
-
 #burger_menu.close span {
   transform: rotate(-32deg);
   width: 55px;
 }
-
 #burger_menu.close span:after {
   top: 0px;
   transform: rotate(65deg);
@@ -130,11 +133,10 @@ ul {
   text-align: left;
   transition: all 0.3s ease-in-out;
 }
-
 #menu.overlay {
   visibility: visible;
   opacity: 1;
-  padding-top: 100px;
+  padding-top: 80px;
   background-color: var(--color-background-body);
   background-image: url(/graphics/headgraphic.png);
   background-repeat: no-repeat;
