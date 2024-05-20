@@ -1,6 +1,6 @@
 ---
 import Secondarybutton from "./Secondarybutton.astro";
-const { head, img, alt, href, text} = Astro.props;
+const { head, img, alt, href, text, target} = Astro.props;
 ---
 <section class="content">
       <img class="image" src={img} alt={alt}>
@@ -9,7 +9,7 @@ const { head, img, alt, href, text} = Astro.props;
             <div class="heartlist">
             <slot />
             </div>
-            <Secondarybutton {href} {text}/>
+            <Secondarybutton {href} {target} {text}/>
       </div>
 </section>
 <style>

@@ -1,13 +1,13 @@
 ---
 import Secondarybutton from "./Secondarybutton.astro";
-const { head, img, alt, href, text, maintext} = Astro.props;
+const { head, img, alt, href, text, maintext, target} = Astro.props;
 ---
 <section class="content">
     <img class="image" src={img} alt={alt}>
     <div class="text">
         <h3>{head}</h3>
         <p class="small">{maintext}</p>
-        <Secondarybutton {href} {text}/>
+        <Secondarybutton {href} {target} {text}/>
     </div>
 </section>
 <style>

@@ -1,7 +1,7 @@
 ---
-const {href = "/", text} = Astro.props;
+const {href = "/", text, target} = Astro.props;
 ---
-<a href={href} class="button-link">
+<a href={href} target={target} class="button-link">
   <p class="linkbuttontext">{text}</p>
 </a>
 
