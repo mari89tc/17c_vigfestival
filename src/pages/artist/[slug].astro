@@ -9,25 +9,25 @@ export async function getStaticPaths() {
     },
   };
   const data = await fetch(url, options).then((res) => res.json());
-  // console.log(data);
   return data.map((singleArtist) => {
-    // console.log(singleArtist);
     return {
       params: { slug: singleArtist.slug },
       props: { singleArtist },
     };
   });
-}
+};
 const { singleArtist } = Astro.props;
 
-import Header from "../../components/Header.astro"
+
 import Main from "../../layouts/main.astro"
-import Navigation from "../../components/Navigation.astro"
 import Secondarybutton from "../../components/Secondarybutton.astro";
 ---
 <Main title="Kunstner">
-    <Navigation/>
-    <Header heading={singleArtist.artist}/>
+    <div class="header">
+      <img class="desktop" src="/graphics/headgraphic.png" alt="head graphic">
+      <img class="mobile" src="/graphics/mobileheadergraphic.png" alt="head graphic">
+      <h2>{singleArtist.artist}</h2>
+    </div>
       <section class="indhold">
         <div class="text">
           <div class="head_flex">
@@ -44,8 +44,26 @@ import Secondarybutton from "../../components/Secondarybutton.astro";
             </a>
         </div>
       </section>
-    </Main>
+</Main>
 <style>
+.header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.desktop, .mobile {
+  width:100%;
+}
+.mobile {
+  display: none;
+}
+h2 {
+  color: var(--color-text-heading2-white, #FFFFF3);
+  margin: 0;
+  position: absolute;
+  text-align: center;
+}
 .indhold {
   display: flex;
   align-items: center;
@@ -78,6 +96,9 @@ p {
   color: var(--Color-text-normaltext_black, #0A0A0A);
   flex: 1 0 0;
 }
+.image {
+  position: relative;
+}
 .artist_img {
   width: 594.5px;
   height: 600px;
@@ -86,12 +107,18 @@ p {
 }
 .image a {
   position: absolute;
-  top: 42%;
-  right: 5%;
+  top: 75%;
+  right: 4%;
   width: 106px;
   height: 106px;
 }
 @media (max-width: 700px) {
+  .mobile {
+    display: block;
+    } 
+    .desktop{
+    display:none;
+  }
 .indhold{
   margin-left: var(--spacing-margin-medium);
   margin-right: var(--spacing-margin-medium);
@@ -104,12 +131,9 @@ padding: 0px;
 width: 360px;
 height: 360px;
 }
-.image a {
-  position: absolute;
-  top: 45%;
-  right: 7%;
-  width: 106px;
-  height: 106px;
+.image a img {
+  width: 85px;
+  height: 85px;
 }
 }
 </style>
