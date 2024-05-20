@@ -6,11 +6,11 @@ const {head, price, date, soldOut} = Astro.props;
 <div class="small_card">
 {soldOut && <div><ScarcityLabelUdsolgt></ScarcityLabelUdsolgt></div>}
     <div class="roundbutton">
-        <a href="/">
+        <a href="/billetter">
         <p class="linkbuttontext">køb her</p>
         </a>
     </div>
-    <a href="/"> 
+    <a href="/billetter"> 
         <div class="udsolgt"><slot/></div>
         <div class="fotilbage"><slot/></div>
         <h3>{head}</h3>
