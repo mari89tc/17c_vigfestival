@@ -8,7 +8,7 @@ const {head, maintext, href, text, img, alt, target} = Astro.props;
         <p class="small">{maintext}</p>
         <Secondarybutton {href} {target} {text}/>
     </div>
-    <img src={img} alt={alt}>
+    <img class="scale_animation" src={img} alt={alt}>
 </section>
 <style>
 .content {
@@ -54,3 +54,26 @@ padding: 0px;
 }
 }
 </style>
+
+<script>
+import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+
+    gsap.from(".scale_animation", {
+      scrollTrigger: {
+        trigger: ".scale_animation",
+        start: "start 90%",
+        end: "end 10%",
+        scrub: true,
+        //markers: true,
+      },
+      //x: 500,
+      scale: 0.8,
+      duration: 2,
+    });
+
+  });
+</script>

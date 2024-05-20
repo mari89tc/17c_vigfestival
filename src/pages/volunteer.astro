@@ -30,14 +30,16 @@ import Navigation from "../components/Navigation.astro"
 </section>
 <section class="section2">
     <div class="testimonial">
-        <p class="large">Jeg har haft en super oplevelse som frivillig på Vig Festival,<br> det har givet mig en unik mulighed for at <br> være en del af noget større.</p>
-        <p class="medium">-Sofie, 23 år, frivillig</p>
+        <div class="annimation"><p class="large">Jeg har haft en super oplevelse som frivillig på Vig Festival,<br> det har givet mig en unik mulighed for at <br> være en del af noget større.</p></div>
+         <div class="annimation"><p class="medium">-Sofie, 23 år, frivillig</p></div>
     </div>
     <CardList head="Fordele som frivillig" img="image/volunteer/frivllig_section3.webp" alt="2 damer fester" href="https://hjertebanken.vigfestival.dk/users/signup/" text="Bliv frivillig" target=”_blank”>
-        <Heartlist input="Del af årets medhjælperfest"/>
-        <Heartlist input="Partoutbillet til alle dage"/>
-        <Heartlist input="Gratis mad og drikke!"/>
-        <Heartlist input="Du bliver en del af et større fællesskab"/>
+        <div class="slide_animation">
+        <div class="li1"><Heartlist input="Del af årets medhjælperfest"/></div>
+        <div class="li2"><Heartlist input="Partoutbillet til alle dage"/></div>
+        <div class="li3"><Heartlist input="Gratis mad og drikke!"/></div>
+        <div class="li4"><Heartlist input="Du bliver en del af et større fællesskab"/></div>
+        </div>
     </CardList>
 </section>
 <section class="section3">
@@ -142,3 +144,29 @@ import Navigation from "../components/Navigation.astro"
     }
 }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+
+  gsap.from(".annimation", {
+    xPercent: 0,
+    opacity: 0,
+    duration: 4,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".annimation",
+      start: "start 70%",
+      end: "bottom 30%",
+      scrub: true,
+     /* markers: true,*/
+    },
+  });
+
+});
+
+</script>
