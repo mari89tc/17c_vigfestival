@@ -22,10 +22,11 @@ import CardList from "../components/Card_list.astro";
             <div class="primary"><Primarybutton text="Køb billet" href="/billetter"/></div>
         </div>
         <div class="heroimage">
-            <img class="large" src="/image/index/large_heroimage.webp" alt="festivalgæster">
-            <img class="medium" src="/image/index/medium_heroimage.webp" alt="børn">
-            <img class="small" src="/image/index/small_heroimage.webp" alt="øl skænkning">
+            <img class="large animated-image" src="/image/index/large_heroimage.webp" alt="festivalgæster">
+            <img class="medium animated-image medium-delay" src="/image/index/medium_heroimage.webp" alt="børn">
+            <img class="small animated-image small-delay" src="/image/index/small_heroimage.webp" alt="øl skænkning">
         </div>
+
     </div>
     <section class="section1">
         <h3>Et program fyldt med fede artister!</h3>
@@ -122,16 +123,42 @@ h4 {
     margin: 10px;
     padding: 0px;
 }
+
+.animated-image {
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+.medium-delay {
+    animation-delay: 0.5s;
+}
+
+.small-delay {
+    animation-delay: 2s;
+}
+.heroimage img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
 .heroimage {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: var(--spacing-margin-xsmall);
     z-index: 1;
-}
-.heroimage img {
-    border-radius: 50%;
-    object-fit: cover;
 }
 .large {
     width: 347px;
@@ -282,5 +309,9 @@ h4 {
     background-image: url(/graphics/mobilelightgreen2.svg);
     height: 160vh;
 }
+
+/* animationer */
+
+
 }
 </style>

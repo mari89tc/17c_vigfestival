@@ -3,7 +3,7 @@ import Secondarybutton from "./Secondarybutton.astro";
 const { head, img, alt, href, text, maintext, target} = Astro.props;
 ---
 <section class="content">
-    <img class="image" src={img} alt={alt}>
+   <div class="scale_animation3"><img class="image" src={img} alt={alt}></div>
     <div class="text">
         <h3>{head}</h3>
         <p class="small">{maintext}</p>
@@ -54,3 +54,26 @@ padding: 0px;
 }
 }
 </style>
+
+<script>
+import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+
+    gsap.from(".scale_animation3", {
+      scrollTrigger: {
+        trigger: ".scale_animation3",
+        start: "start 90%",
+        end: "end 10%",
+        scrub: true,
+        //markers: true,
+      },
+      scale: 0.8,
+      duration: 2,
+    });
+
+  });
+</script>
+
