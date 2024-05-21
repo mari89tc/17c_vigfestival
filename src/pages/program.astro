@@ -1,226 +1,67 @@
 ---
-import Main from "../layouts/main.astro"
-import Header from "../components/Header.astro"
-import SkemaCardOneHour from "../components/SkemaCardOnehour.astro"
-import SkemaCardOneAndAHalf from "../components/SkemaCardOneandahalf.astro"
-import Cta from "../components/Cta.astro"
-import Days from "../components/Days.astro"
-import SkemaCardLong from "../components/SkemaCardLong.astro"
+import Main from "../layouts/main.astro";
+import Header from "../components/Header.astro";
+import Cta from "../components/Cta.astro";
+import ProgramTorsdag from "../components/Program_torsdag.astro";
+import ProgramOnsdag from "../components/Program_onsdag.astro";
+import ProgramFredag from "../components/Program_fredag.astro";
+import ProgramLordag from "../components/Program_lørdag.astro";
 ---
 <Main title="Program">
-<Header heading="Program"/>
-<section class="section1">
-    <Days/>
-</section>
-<div class="back">
-<a href="/"> <img class="backbutton" src="/logos/back_button.svg" alt="Tilbage knap" /></a>
-<a href="/"> <img class="backbutton_reverse" src="/logos/back_button.svg" alt="Tilbage knap" /></a>
-</div>
-<section class="program_torsdag"> 
-    <div class="content">
-        <h4>Stor Scene</h4>
-        <div class="storscene">
-            <div class="item-a"><SkemaCardOneHour head="Svea S" time="16:15"/></div>
-            <div class="item-b"><SkemaCardOneAndAHalf head="Rasmus Seebach" time="18:30"/></div>
-            <div class="item-c"><SkemaCardOneAndAHalf head="Tobias Rahim" time="21:00"/></div>
-            <div class="item-d"><SkemaCardOneAndAHalf head="Faustix" time="23:00"/></div>   
-        </div>
-    </div>
-    <div class="content">
-        <h4>Hønsehuset</h4>
-        <div class="honsehuset">
-            <div class="item-a"><SkemaCardOneHour head="Lasse Skriver" time="14:15"/></div>
-            <div class="item-b"><SkemaCardOneAndAHalf head="Østkyst Hustlers" time="17:00"/></div>
-            <div class="item-c"><SkemaCardOneAndAHalf head="ItaloBrothers" time="19:45"/></div>
-            <div class="item-d"><SkemaCardOneAndAHalf head="Zar Paulo" time="22:30"/></div>   
-        </div>
-    </div>
-    <div class="content">
-        <h4>Heartbeat</h4>
-        <div class="heartbeat">
-            <div class="item-a"><SkemaCardOneHour head="Souveniers" time="15:30"/></div>
-            <div class="item-b"><SkemaCardOneAndAHalf head="René & Værsgo" time="18:15"/></div>
-            <div class="item-c"><SkemaCardOneAndAHalf head="Johnny Madsen Jam" time="21:30"/></div>
-            <div class="item-d"><SkemaCardLong head="DJ 4Gaard" time="23:15"/>
-        </div>   
-    </div>   
-    <div class="content">
-        <h4>Viggos Verden</h4>
-        <div class="viggosverden">
-            <div class="item-a"><SkemaCardOneHour head="Souveniers" time="15:30"/></div>
-            <div class="item-b"><SkemaCardOneAndAHalf head="René & Værsgo" time="18:15"/></div>
-            <div class="item-c"><SkemaCardOneAndAHalf head="Johnny Madsen Jam" time="21:30"/></div>
-            <div class="item-d"><SkemaCardLong head="DJ 4Gaard" time="23:15"/>
-        </div>   
-    </div>   
-    <div class="content">
-        <h4>Studio 54</h4>
-        <div class="studio54">
-            <div class="item-a"><SkemaCardOneHour head="Souveniers" time="15:30"/></div>
-            <div class="item-b"><SkemaCardOneAndAHalf head="René & Værsgo" time="18:15"/></div>
-            <div class="item-c"><SkemaCardOneAndAHalf head="Johnny Madsen Jam" time="21:30"/></div>
-            <div class="item-d"><SkemaCardLong head="DJ 4Gaard" time="23:15"/>
-        </div>   
-    </div>   
-    <div class="content">
-        <h4>Hønsegården</h4>
-        <div class="honsegaarden">
-            <div class="item-a"><SkemaCardOneHour head="Souveniers" time="15:30"/></div>
-            <div class="item-b"><SkemaCardOneAndAHalf head="René & Værsgo" time="18:15"/></div>
-            <div class="item-c"><SkemaCardOneAndAHalf head="Johnny Madsen Jam" time="21:30"/></div>
-            <div class="item-d"><SkemaCardLong head="DJ 4Gaard" time="23:15"/>
-        </div>   
-    </div>   
-</section>
-<section class="section2">
-    <Cta head="Vil du se alle kunstnere? Så tjek vores fulde Line-up ud!" text="Se lineup"/>
-</section>
+  <Header heading="Program"/>
+  <div class="days">
+      <a href="#" data-day="onsdag">Onsdag</a>
+      <a href="#" data-day="torsdag">Torsdag</a>
+      <a href="#" data-day="fredag">Fredag</a>
+      <a href="#" data-day="lordag">Lørdag</a>
+  </div>
+  <div id="program-container">
+    <!-- <ProgramOnsdag /> -->
+    <ProgramTorsdag/>
+    <!-- <ProgramFredag />
+    <ProgramLordag /> -->
+  </div>
+  <section class="section2">
+      <Cta head="Vil du se alle kunstnere? Så tjek vores fulde Lineup ud!" text="Se lineup"/>
+  </section>
 </Main>
 
 <style>
-
-.backbutton_reverse {
-    transform: rotate(180deg);
-}
-
-.back {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    padding: var(--spacing-margin-medium);
-}
-
-h4 {
-    color: var(--color-text-heading-4-black);
-    align-items: center;
-    text-align: center;
-}
-
-.program_torsdag {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: var(--spacing-vertical-xsmall);
-    overflow-x: auto;
-}
-
-.content {
-    min-width: 300px;
-    flex-shrink: 0;
-}
-
-.storscene, .honsehuset, .heartbeat, .viggosverden, .studio54, .honsegaarden {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1px;
-    grid-template-rows: repeat(13, 1fr);
-    background-color: var(--color-green-50);
-    padding:var(--spacing-margin-small);
-    border-radius: var(--spacing-corner-radius-medium);
-}
-
-.storscene .item-a {
-    grid-row: 3;
-}
-
-.storscene .item-b {
-    grid-row: 5;
-}
-
-.storscene .item-c {
-    grid-row: 8;
-}
-
-.storscene .item-d {
-    grid-row: 10;
-}
-
-.honsehuset .item-a {
-    grid-row: 1;
-}
-
-.honsehuset .item-b {
-    grid-row: 4;
-}
-
-.honsehuset .item-c {
-    grid-row: 7;
-}
-
-.honsehuset .item-d {
-    grid-row: 9;
-}
-
-.heartbeat .item-a {
-    grid-row: 2;
-}
-
-.heartbeat .item-b {
-    grid-row: 5;
-}
-
-.heartbeat .item-c {
-    grid-row: 8;
-}
-
-.heartbeat .item-d {
-    grid-row: 10;
-    height: 40px;
-}
-
-.viggosverden .item-a {
-    grid-row: 3;
-}
-
-.viggosverden .item-b {
-    grid-row: 5;
-}
-
-.viggosverden .item-c {
-    grid-row: 8;
-}
-
-.viggosverden .item-d {
-    grid-row: 10;
-}
-
-.studio54 .item-a {
-    grid-row: 1;
-}
-
-.studio54 .item-b {
-    grid-row: 4;
-}
-
-.studio54 .item-c {
-    grid-row: 7;
-}
-
-.studio54 .item-d {
-    grid-row: 9;
-}
-
-.honsegaarden .item-a {
-    grid-row: 2;
-}
-
-.honsegaarden .item-b {
-    grid-row: 5;
-}
-
-.honsegaarden .item-c {
-    grid-row: 8;
-}
-
-.honsegaarden .item-d {
-    grid-row: 10;
-}
-
-.section2 {
+.days {
     display: flex;
     justify-content: center;
-    margin-top: var(--spacing-vertical-medium);
-    margin-bottom: var(--spacing-vertical-large);
+    gap: var(--spacing-vertical-xsmall);
 }
-
+a {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-button-linkbutton-text-default);
+}
+a:active {
+    text-decoration: underline;
+    color: var(--color-button-linkbutton-text-clicked);
+}
+.section2 {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-vertical-medium);
+  margin-bottom: var(--spacing-vertical-large);
+}
+.program {
+  display: none; /* Skjuler alle programmer som standard */
+}
+.program:not(.hidden) {
+  display: block; /* Viser programmet når hidden klassen fjernes */
+}
+.hidden {
+  display: none; /* Skjuler elementer med hidden klassen */
+}
 </style>
+<script>
+
+</script>
+    
