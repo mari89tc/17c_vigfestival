@@ -1,6 +1,6 @@
 <div class="popupOverlay" >
     <div class="grid">
-        <img class="spinner" src="/logos/vig_festival_logo.svg" alt="vig festival logo">
+        <img class="loader" src="/logos/vig_festival_logo.svg" alt="vig festival logo">
     </div>
 </div>
 <style>
@@ -21,13 +21,13 @@
     width: 100%;
     height: 100%;
 }
-.spinner {
+.loader {
   width: 25%;
   height: 25%;
   align-self: center;
   justify-self: center;
-  -webkit-animation: scale 15s linear infinite;
-  animation: scale 5s linear infinite;
+  -webkit-animation: scale 2s linear infinite;
+  animation: scale 2s linear infinite;
 }
 .hide {
   display: none;
@@ -36,11 +36,11 @@
   0% {
     -webkit-transform: scale(1);
   }
-  50% {
+  /* 50% {
     -webkit-transform: scale(1.5);
-  }
+  } */
   100% {
-    -webkit-transform: scale(1);
+    -webkit-transform: scale(2);
   }
 }
 
@@ -48,37 +48,37 @@
   0% {
     transform: scale(1);
   }
-  50% {
+  /* 50% {
     transform: scale(1.5);
-  }
+  } */
   100% {
-    transform: scale(1);
+    transform: scale(2);
   }
 }
 </style>
 <script>
-    function hideSpinner() {
+    function hideLoader() {
         var popupOverlay = document.querySelector('.popupOverlay');
         popupOverlay.classList.add('hide');
     }
 
-    var minDisplayTime = 4000; // 3 seconds
+    var minDisplayTime = 2000;
     var contentLoaded = false;
     var timerFinished = false;
 
-    // Timer to ensure spinner is displayed for at least minDisplayTime
+    // Timer der sikrer at loaderen er displayed i minDisplayTime
     setTimeout(function() {
         timerFinished = true;
         if (contentLoaded) {
-            hideSpinner();
+            hideLoader();
         }
     }, minDisplayTime);
 
-    // Event listener for when the window has fully loaded
+    // Event listener til når siden er helt loadet
     window.onload = function() {
         contentLoaded = true;
         if (timerFinished) {
-            hideSpinner();
+            hideLoader();
         }
     };
 </script>
