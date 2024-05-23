@@ -60,6 +60,17 @@ a:active {
 .hidden {
   display: none; 
 }
+@media (max-width: 700px) {
+    .days {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-vertical-xxsmall);
+    padding-top: var(--spacing-vertical-xxsmall);
+}  
+a {
+    font-size: 14px;
+}
+}
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", () => {

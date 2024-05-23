@@ -126,4 +126,20 @@ h4 {
   padding: var(--spacing-margin-small);
   border-radius: var(--spacing-corner-radius-medium);
 }
+@media (max-width: 700px) {
+  .page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-vertical-xsmall);
+} 
+.prev, .next {
+  padding: 10px;
+}
+.prev img, .next img {
+  width: 75%;
+}
+h4 {
+  margin-bottom: var(--spacing-vertical-xxsmall);
+}
+}
 </style>

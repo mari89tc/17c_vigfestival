@@ -45,6 +45,7 @@ import Cta from "../components/Cta.astro"
     flex-direction: column;
     place-items: center;
     justify-content: center;
+    margin-bottom: var(--spacing-vertical-medium);
 }
 div {
     display: flex;
@@ -52,15 +53,18 @@ div {
     gap: var(--spacing-margin-small);
 }
 @media (max-width: 1000px) {
-    .section_1 {
+.section_1 {
     gap: var(--spacing-margin-small);
-    }
-    div {
-        display: flex;
-        flex-wrap: wrap;
-            align-items: center;
+}
+div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-        gap: var(--spacing-margin-small);
-    }
+    gap: var(--spacing-margin-small);
+}
+.section_2 {
+    margin-bottom: var(--spacing-vertical-small);
+}
 }
 </style>

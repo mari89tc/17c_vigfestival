@@ -53,11 +53,15 @@ Herefter kan du vælge Mine ordrer i bjælken og se hvad du har bestilt. Du får
 
 p {
     background-color: var(--color-green-400);
-       color: var(--color-text-normaltext-white);
+    color: var(--color-text-normaltext-white);
     justify-content: space-between;
-    font-size: 16px;
     margin-top: 2px;
     padding: var(--spacing-margin-small);
     border-radius: var(--spacing-corner-radius-small);
+}
+@media (max-width: 700px) {
+p {
+    font-size: 14px;
+}
 }
 </style>
