@@ -2,18 +2,18 @@
 import Main from "../layouts/main.astro";
 import Header from "../components/Header.astro";
 import Cta from "../components/Cta.astro";
-import ProgramTorsdag from "../components/Program_torsdag.astro";
+import ProgramLordag from "../components/Program_lørdag.astro";
 ---
 <Main title="Program">
   <Header heading="Program"/>
   <div class="days">
     <a href="/onsdag" data-day="onsdag">Onsdag</a>
-    <a class="clicked" href="/program" data-day="torsdag">Torsdag</a>
+    <a href="/program" data-day="torsdag">Torsdag</a>
     <a href="/fredag" data-day="fredag">Fredag</a>
-    <a href="/lordag" data-day="lordag">Lørdag</a>
+    <a class="clicked" href="/lordag" data-day="lordag">Lørdag</a>
 </div>
   <div id="program-container">
-    <ProgramTorsdag/>
+    <ProgramLordag/>
   </div>
   <section class="section2">
       <Cta head="Vil du se alle kunstnere? Så tjek vores fulde Lineup ud!" text="Se lineup"/>
