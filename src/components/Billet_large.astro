@@ -35,14 +35,14 @@ a {
 }
 
 h3 {
-    color: var(--Color-Cards-ticket-text-main, #174128);
+    color: var(--color-cards-ticket-text-main);
     margin-top: 35%;
     text-align: center;
     text-transform: uppercase;
 }
 
 .price {
-    color: var(--Color-Cards-ticket-text-main, #174128);
+    color: var(--color-cards-ticket-text-main);
     margin: var(--spacing-margin-small);
     text-align: center;
 }
@@ -51,7 +51,7 @@ h3 {
     display: flex;
     padding: 100px 20px;
     align-items: flex-end;
-    gap: 10px;
+    gap: var(--spacing-2);
     flex: 1 0 0;
     align-self: stretch;
 }
@@ -64,12 +64,12 @@ h3 {
 }
 
 .large_card:hover {
-    background: var(--Color-Cards-ticket-background-hover, #174128);
+    background: var(--color-cards-ticket-background-hover);
     color: var(--color-green-400);
 }
 
 .large_card:active {
-    background: var(--Color-Cards-ticket-background-hover, #174128);
+    background: var(--color-cards-ticket-background-hover);
     color: var(--color-green-400);
 }
 
@@ -96,8 +96,8 @@ h3 {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    background: var(--Color-Button-Roundbutton-background-hover, #FFD9FD);
-    color: var(--Color-Button-Roundbutton-text-hover, #0A0A0A);
+    background: var(--color-button-roundbutton-background-hover);
+    color: var(--color-button-roundbutton-text-hover);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -105,7 +105,7 @@ h3 {
 }
 
 .roundbutton a:active {
-    background: var(--Color-Button-Roundbutton-background-Active, #FF9CF9);
+    background: var(--color-button-roundbutton-background-active);
 }
 
 .linkbuttontext {
@@ -120,7 +120,7 @@ h3 {
 }
 
 .linkbuttontext p:hover, .linkbuttontext p:active {
-    color: var(--Color-Button-Roundbutton-text-hover, #0A0A0A);
+    color: var(--color-button-roundbutton-text-hover);
 }
 
 @media (max-width: 700px) {
