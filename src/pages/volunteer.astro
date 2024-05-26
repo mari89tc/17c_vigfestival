@@ -10,8 +10,10 @@ import Logind from "../components/Logind.astro"
 ---
 <Main title="Frivillig">
 <div class="head">
+    <div class="background">
         <img class="desktop" src="/graphics/frivilliggraphic.png" alt="grafik heading" width="1281px" height="626px">
         <img class="mobile" src="/graphics/mobilefrivillig.svg" alt="grafik heading" width="390px" height="501px">
+    </div>
     <div class="head_text">
         <h2>Frivillig</h2>
         <p class="large">Vil du være en del af fællesskabet, så bliv en del af frivilligteamet på Vig Festival</p>
@@ -52,8 +54,14 @@ import Logind from "../components/Logind.astro"
     justify-content: center;
     align-items: center;
 }  
-.head img {
-    width:100%;
+.background {
+    width: 100%;
+    height: auto;
+}
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .head_text {
     color: var(--color-text-heading2-white, #FFFFF3);
