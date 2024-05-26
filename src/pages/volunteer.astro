@@ -10,8 +10,8 @@ import Logind from "../components/Logind.astro"
 ---
 <Main title="Frivillig">
 <div class="head">
-        <img class="desktop" src="/graphics/frivilliggraphic.png" alt="grafik heading">
-        <img class="mobile" src="/graphics/mobilefrivillig.svg" alt="grafik heading">
+        <img class="desktop" src="/graphics/frivilliggraphic.png" alt="grafik heading" width="1281px" height="626px">
+        <img class="mobile" src="/graphics/mobilefrivillig.svg" alt="grafik heading" width="390px" height="501px">
     <div class="head_text">
         <h2>Frivillig</h2>
         <p class="large">Vil du være en del af fællesskabet, så bliv en del af frivilligteamet på Vig Festival</p>
@@ -30,12 +30,10 @@ import Logind from "../components/Logind.astro"
          <div class="annimation"><p class="medium">-Sofie, 23 år, frivillig</p></div>
     </div>
     <CardList head="Fordele som frivillig" img="/image/volunteer/frivllig_section3.webp" alt="2 damer fester" href="https://hjertebanken.vigfestival.dk/users/signup/" text="Bliv frivillig" target=”_blank”>
-        <div class="slide_animation">
-        <div class="li1"><Heartlist input="Del af årets medhjælperfest"/></div>
-        <div class="li2"><Heartlist input="Partoutbillet til alle dage"/></div>
-        <div class="li3"><Heartlist input="Gratis mad og drikke!"/></div>
-        <div class="li4"><Heartlist input="Du bliver en del af et større fællesskab"/></div>
-        </div>
+            <Heartlist input="Del af årets medhjælperfest"/>
+            <Heartlist input="Partoutbillet til alle dage"/>
+            <Heartlist input="Gratis mad og drikke!"/>
+            <Heartlist input="Du bliver en del af et større fællesskab"/>
     </CardList>
 </section>
 <section class="section3">
@@ -140,29 +138,3 @@ import Logind from "../components/Logind.astro"
     }
 }
 </style>
-
-<script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-  gsap.registerPlugin(ScrollTrigger);
-
-gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
-
-  gsap.from(".annimation", {
-    xPercent: 0,
-    opacity: 0,
-    duration: 4,
-    stagger: 0.5,
-    scrollTrigger: {
-      trigger: ".annimation",
-      start: "start 70%",
-      end: "bottom 30%",
-      scrub: true,
-     /* markers: true,*/
-    },
-  });
-
-});
-
-</script>

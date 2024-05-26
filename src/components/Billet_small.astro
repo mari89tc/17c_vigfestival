@@ -1,10 +1,12 @@
 ---
+import ScarcityLabelFtilbage from "./Scarcity_label_fåtilbage.astro";
 import ScarcityLabelUdsolgt from "./Scarcity_label_udsolgt.astro";
 
-const {head, price, date, soldOut} = Astro.props;
+const {head, price, date, soldOut, fewLeft} = Astro.props;
 ---
 <div class="small_card">
 {soldOut && <div><ScarcityLabelUdsolgt></ScarcityLabelUdsolgt></div>}
+{fewLeft && <div><ScarcityLabelFtilbage></ScarcityLabelFtilbage></div>}
     <div class="roundbutton">
         <a href="/billetter">
         <p class="linkbuttontext">køb her</p>
