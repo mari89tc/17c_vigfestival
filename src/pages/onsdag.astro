@@ -16,7 +16,7 @@ import ProgramOnsdag from "../components/Program_onsdag.astro";
     <ProgramOnsdag/>
   </div>
   <section class="section2">
-      <Cta head="Vil du se alle kunstnere? Så tjek vores fulde Lineup ud!" text="Se lineup"/>
+      <Cta head="Vil du se alle kunstnere? Så tjek vores fulde Lineup ud!" href="/lineup" text="Se lineup"/>
   </section>
 </Main>
 
@@ -76,26 +76,4 @@ a {
 }
 }
 </style>
-<!-- <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll('.days a');
-  const programs = document.querySelectorAll('.program');
-
-  links.forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      event.stopPropagation(); 
-      const day = link.getAttribute('data-day');
-
-      programs.forEach(program => {
-        if (program.classList.contains(`program-${day}`)) {
-          program.classList.remove('hidden');
-        } else {
-          program.classList.add('hidden');
-        }
-      });
-    });
-  });
-});
-</script> -->
     
